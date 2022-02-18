@@ -1,14 +1,16 @@
 import Email from "./email";
 import Places from "./places";
 import Socials from "./socials";
-import { StyledFooter } from "./styles";
+import { StyledFooter, Box } from "./styles";
 
 function Footer() {
   return (
     <StyledFooter className="spacing">
       <Email />
-      <Socials />
-      <Places />
+      <Box>
+        <Socials />
+        <Places />
+      </Box>
     </StyledFooter>
   );
 }

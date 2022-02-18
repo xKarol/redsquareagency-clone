@@ -24,15 +24,15 @@ const GlobalStyles = createGlobalStyle`
         color: ${(props) => props.theme.colors.white};
     }
     .spacing{
-        padding: 0 25px;
+        padding-left: 25px;
+        padding-right: 25px;
         @media ${device.sm}{
-            padding: 0 50px;
-        }
-        @media ${device.md}{
-            padding: 0 100px;
+            padding-left: 50px;
+            padding-right: 50px;
         }
         @media ${device.lg}{
-            padding: 0 150px;
+            padding-left: 150px;
+            padding-right: 150px;
         }
     }
 `;
