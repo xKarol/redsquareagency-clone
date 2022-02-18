@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledIdeaSection = styled.section`
-  padding: 0 25px;
   margin: 30px 0;
   line-height: 1.4;
   margin-bottom: 50px;

@@ -2,7 +2,7 @@ import { StyledIdeaSection, StyledIdeaHeading, StyledIdeaText } from "./styles";
 
 function IdeaSection() {
   return (
-    <StyledIdeaSection>
+    <StyledIdeaSection className="spacing">
       <StyledIdeaHeading>
         We deal in ideas, design and media that are category defying. When the
         world Millis, you’ve got to Vanilli.

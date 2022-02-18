@@ -8,8 +8,8 @@ function PreviewImages() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (activeImage >= images.length - 1) return setActiveImage(0);
-      setActiveImage((prevId) => prevId + 1);
+      // if (activeImage >= images.length - 1) return setActiveImage(0);
+      // setActiveImage((prevId) => prevId + 1);
     }, 200);
 
     return () => {
@@ -24,7 +24,13 @@ function PreviewImages() {
           key={image.id}
           className={`preview-image ${activeImage === index ? "active" : ""}`}
         >
-          <Image src={image.path} alt={image.alt} layout="fill" />
+          <Image
+            src={image.path}
+            alt={image.alt}
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
         </StyledImage>
       ))}
     </StyledImages>

@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { device } from "../../styles/breakpoints";
 
 const StyledHeader = styled.header`
-  top: 30px;
-  left: 0;
-  right: 0;
-  padding: 30px 25px;
+  margin-top: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media ${device.lg} {
+    margin-top: 100px;
+  }
 `;
 
 const StyledLink = styled.a`

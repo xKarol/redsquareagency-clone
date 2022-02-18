@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledImages = styled.section`
   width: 100%;
-  height: 225px;
+  min-height: 225px;
 `;
 
 const StyledImage = styled.section`

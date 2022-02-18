@@ -5,7 +5,7 @@ import { StyledFooter } from "./styles";
 
 function Footer() {
   return (
-    <StyledFooter>
+    <StyledFooter className="spacing">
       <Email />
       <Socials />
       <Places />

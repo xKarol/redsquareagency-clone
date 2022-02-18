@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  padding: 0 25px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;

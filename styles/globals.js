@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "./breakpoints";
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -21,6 +22,18 @@ const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: ${(props) => props.theme.colors.white};
+    }
+    .spacing{
+        padding: 0 25px;
+        @media ${device.sm}{
+            padding: 0 50px;
+        }
+        @media ${device.md}{
+            padding: 0 100px;
+        }
+        @media ${device.lg}{
+            padding: 0 150px;
+        }
     }
 `;
 

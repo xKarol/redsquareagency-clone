@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledClientsSection = styled.section`
-  padding: 0 25px;
   margin-bottom: 60px;
 `;
 

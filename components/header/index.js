@@ -4,7 +4,7 @@ import { StyledHeader } from "./styles";
 
 function Header() {
   return (
-    <StyledHeader>
+    <StyledHeader className="spacing">
       <Square />
       <HeaderLink />
     </StyledHeader>

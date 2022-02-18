@@ -8,7 +8,7 @@ import Client from "./client";
 
 function ClientsSection() {
   return (
-    <StyledClientsSection>
+    <StyledClientsSection className="spacing">
       <StyledClientsHeading>Select Clients</StyledClientsHeading>
       <StyledClientsList>
         {clients.map((client) => (

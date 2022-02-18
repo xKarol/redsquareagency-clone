@@ -2,8 +2,10 @@ import { StyledHero, StyledHeading } from "./styles";
 
 function Hero() {
   return (
-    <StyledHero>
-      <StyledHeading>The agency for what comes next.</StyledHeading>
+    <StyledHero className="spacing">
+      <StyledHeading>
+        The agency for <br /> what comes next.
+      </StyledHeading>
     </StyledHero>
   );
 }
