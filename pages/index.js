@@ -1,9 +1,13 @@
-import Head from 'next/head'
+import Header from "../components/header";
+import Hero from "../components/hero";
+import PreviewImages from "../components/preview-images";
 
 export default function Home() {
   return (
     <>
-    Test
+      <Header />
+      <Hero />
+      <PreviewImages />
     </>
-  )
+  );
 }

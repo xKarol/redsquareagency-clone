@@ -6,14 +6,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link
-          href="http://fonts.cdnfonts.com/css/circular-book"
-          rel="stylesheet"
-        />
-        <link
-          href="http://fonts.cdnfonts.com/css/youngserif"
-          rel="stylesheet"
-        />
         <title>Red Square — The agency for what comes next.</title>
       </Head>
       <Theme>
