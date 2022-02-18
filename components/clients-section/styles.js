@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledClientsSection = styled.section`
   padding: 0 25px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 `;
 
 const StyledClientsHeading = styled.h3`
