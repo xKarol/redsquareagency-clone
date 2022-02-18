@@ -2,6 +2,7 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import PreviewImages from "../components/preview-images";
 import IdeaSection from "../components/idea-section";
+import ClientsSection from "../components/clients-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <PreviewImages />
       <IdeaSection />
+      <ClientsSection />
     </>
   );
 }

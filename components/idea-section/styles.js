@@ -4,6 +4,7 @@ const StyledIdeaSection = styled.section`
   padding: 0 25px;
   margin: 30px 0;
   line-height: 1.4;
+  margin-bottom: 50px;
 `;
 const StyledIdeaHeading = styled.h2`
   margin-bottom: 30px;
