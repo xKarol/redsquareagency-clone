@@ -10,7 +10,7 @@ const variants = {
     translateY: 0,
     transition: { duration: 0.6 },
   },
-  hidden: { opacity: 0, translateY: 100 },
+  hidden: { opacity: 0, translateY: 50 },
 };
 
 function Text() {

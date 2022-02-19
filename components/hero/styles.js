@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { device } from "../../styles/breakpoints";
 
 const StyledHero = styled.section`
@@ -7,9 +7,18 @@ const StyledHero = styled.section`
   align-items: flex-end;
   font-size: 36px;
 
-  @media ${device.lg} {
+  @media ${device.md} {
     height: 270px;
     font-size: 7vw;
+  }
+`;
+
+const slideDown = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `;
 
@@ -18,6 +27,12 @@ const StyledHeading = styled.h1`
   font-size: 1em;
   line-height: 1;
   margin-bottom: 25px;
+  > span {
+    animation: ${slideDown} 400ms attr(data-delay) ease-in-out;
+  }
+  > :not(:last-child) {
+    margin-right: 15px;
+  }
 `;
 
 export { StyledHero, StyledHeading };
