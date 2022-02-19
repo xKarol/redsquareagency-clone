@@ -17,6 +17,7 @@ const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.second};
   font-size: 1em;
   line-height: 1;
+  margin-bottom: 25px;
 `;
 
 export { StyledHero, StyledHeading };

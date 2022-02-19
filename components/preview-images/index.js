@@ -8,8 +8,8 @@ function PreviewImages() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // if (activeImage >= images.length - 1) return setActiveImage(0);
-      // setActiveImage((prevId) => prevId + 1);
+      if (activeImage >= images.length - 1) return setActiveImage(0);
+      setActiveImage((prevId) => prevId + 1);
     }, 200);
 
     return () => {
@@ -28,7 +28,7 @@ function PreviewImages() {
             src={image.path}
             alt={image.alt}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
             priority
           />
         </StyledImage>
