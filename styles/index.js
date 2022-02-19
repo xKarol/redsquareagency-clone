@@ -6,4 +6,11 @@ const Square = styled.div`
   background-color: ${(props) => props.theme.colors.red};
 `;
 
-export { Square };
+const StyledDivider = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.gray};
+  opacity: 0.25;
+`;
+
+export { Square, StyledDivider };
