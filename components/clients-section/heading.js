@@ -1,22 +1,18 @@
-import Email from "./email";
-import Places from "./places";
-import Socials from "./socials";
-import { StyledFooter, Box } from "./styles";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { StyledClientsHeading } from "./styles";
 
 const variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    translateY: 0,
     transition: { duration: 0.4 },
   },
-  hidden: { opacity: 0, translateY: 50 },
+  hidden: { opacity: 0 },
 };
 
-function Footer() {
+function Heading() {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
@@ -32,15 +28,9 @@ function Footer() {
       initial="hidden"
       variants={variants}
     >
-      <StyledFooter className="spacing">
-        <Email />
-        <Box>
-          <Socials />
-          <Places />
-        </Box>
-      </StyledFooter>
+      <StyledClientsHeading>Select Clients</StyledClientsHeading>
     </motion.div>
   );
 }
 
-export default Footer;
+export default Heading;

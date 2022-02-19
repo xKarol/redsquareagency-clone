@@ -1,10 +1,7 @@
-import Email from "./email";
-import Places from "./places";
-import Socials from "./socials";
-import { StyledFooter, Box } from "./styles";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { StyledIdeaHeading } from "./styles";
 
 const variants = {
   visible: {
@@ -13,10 +10,10 @@ const variants = {
     translateY: 0,
     transition: { duration: 0.4 },
   },
-  hidden: { opacity: 0, translateY: 50 },
+  hidden: { opacity: 0, translateY: 100 },
 };
 
-function Footer() {
+function Heading() {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
@@ -32,15 +29,12 @@ function Footer() {
       initial="hidden"
       variants={variants}
     >
-      <StyledFooter className="spacing">
-        <Email />
-        <Box>
-          <Socials />
-          <Places />
-        </Box>
-      </StyledFooter>
+      <StyledIdeaHeading>
+        We deal in ideas, design and media that are category defying. When the
+        world Millis, you’ve got to Vanilli.
+      </StyledIdeaHeading>
     </motion.div>
   );
 }
 
-export default Footer;
+export default Heading;

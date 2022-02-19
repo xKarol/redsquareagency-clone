@@ -1,6 +1,5 @@
 import {
   StyledClientsSection,
-  StyledClientsHeading,
   StyledClientsList,
   Container,
   Box,
@@ -8,15 +7,19 @@ import {
 import clients from "./data.json";
 import Client from "./client";
 import Divider from "../divider";
+import Heading from "./heading";
+
 
 function ClientsSection() {
   const half = Math.ceil(clients.length / 2);
+
 
   return (
     <StyledClientsSection className="spacing">
       <Divider />
       <Container>
-        <StyledClientsHeading>Select Clients</StyledClientsHeading>
+        <Heading />
+
         <StyledClientsList>
           <Box>
             {clients.slice(0, half).map((client) => (

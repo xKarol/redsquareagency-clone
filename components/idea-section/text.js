@@ -1,22 +1,19 @@
-import Email from "./email";
-import Places from "./places";
-import Socials from "./socials";
-import { StyledFooter, Box } from "./styles";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { StyledIdeaText } from "./styles";
 
 const variants = {
   visible: {
     opacity: 1,
     scale: 1,
     translateY: 0,
-    transition: { duration: 0.4 },
+    transition: { duration: 0.6 },
   },
-  hidden: { opacity: 0, translateY: 50 },
+  hidden: { opacity: 0, translateY: 100 },
 };
 
-function Footer() {
+function Text() {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
@@ -32,15 +29,14 @@ function Footer() {
       initial="hidden"
       variants={variants}
     >
-      <StyledFooter className="spacing">
-        <Email />
-        <Box>
-          <Socials />
-          <Places />
-        </Box>
-      </StyledFooter>
+      <StyledIdeaText>
+        Red Square believes in rigorous development of brand strategy and
+        whip-smart execution. We make all sorts of things. Things that move
+        markets, compel audiences and sell product. We help great brands create
+        what comes next.
+      </StyledIdeaText>
     </motion.div>
   );
 }
 
-export default Footer;
+export default Text;

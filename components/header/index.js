@@ -1,11 +1,11 @@
-import { Square } from "../../styles";
+import Logo from "../logo";
 import HeaderLink from "./HeaderLink";
 import { StyledHeader } from "./styles";
 
 function Header() {
   return (
     <StyledHeader className="spacing">
-      <Square />
+      <Logo />
       <HeaderLink />
     </StyledHeader>
   );
