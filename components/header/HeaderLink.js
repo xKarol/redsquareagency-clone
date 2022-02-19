@@ -5,7 +5,7 @@ import Link from "next/link";
 function HeaderLink() {
   return (
     <Link href="/" passHref>
-      <StyledLink>
+      <StyledLink className="hover-blur">
         Work <BiChevronRight />
       </StyledLink>
     </Link>

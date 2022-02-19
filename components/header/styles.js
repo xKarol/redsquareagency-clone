@@ -19,32 +19,11 @@ const StyledLink = styled.a`
   transition: transform 200ms ease-in-out;
   z-index: 10;
   &:hover {
-    /* transform: translateX(5px); */ // sprawdzic czemu nie ma tla gdy jest ta wartosc
+    /* transform: translateX(5px); // sprawdzic czemu nie ma tla gdy jest ta wartosc */
     > :last-child {
       transform: translateX(5px);
     }
   }
-
-  &:before {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    backdrop-filter: blur(5px) brightness(0.4);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-    pointer-events: none;
-  }
-
-  &:hover {
-    &:before {
-      opacity: 1;
-    }
-  }
-
   > :last-child {
     color: ${(props) => props.theme.colors.white};
     font-size: 22px;

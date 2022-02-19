@@ -24,24 +24,6 @@ const StyledEmail = styled.a`
   span.email {
     color: ${(props) => props.theme.colors.red};
   }
-  &:before {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    backdrop-filter: blur(5px) brightness(0.4);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-    pointer-events: none;
-  }
-  &:hover:before {
-    @media ${device.sm} {
-      opacity: 1;
-    }
-  }
 `;
 
 const StyledEmailHeading = styled.h4`
