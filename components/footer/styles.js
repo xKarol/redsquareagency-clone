@@ -2,20 +2,16 @@ import styled from "styled-components";
 import { device } from "../../styles/breakpoints";
 
 const StyledFooter = styled.footer`
-  padding-bottom: 50px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   line-height: 1;
-  flex-wrap: wrap;
-  @media ${device.sm} {
-    padding-bottom: 150px;
-  }
 `;
 
 const StyledEmail = styled.a`
   font-size: 35px;
   font-family: ${(props) => props.theme.fonts.mainBold};
-  margin-right: 50px;
+  margin-right: 20px;
   position: relative;
   z-index: 100;
   @media ${device.sm} {
@@ -65,6 +61,17 @@ const Box = styled.div`
   }
 `;
 
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  @media ${device.sm} {
+    margin-bottom: 150px;
+  }
+`;
+
 export {
   StyledFooter,
   StyledEmail,
@@ -73,4 +80,5 @@ export {
   StyledSocialLink,
   StyledPlaces,
   Box,
+  Container,
 };

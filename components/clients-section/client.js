@@ -14,7 +14,7 @@ const variants = {
 
 function Client({ name }) {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ rootMargin: "100% 0px 0px 0px" });
 
   useEffect(() => {
     if (inView) controls.start("visible");

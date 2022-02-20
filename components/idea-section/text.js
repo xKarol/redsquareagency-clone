@@ -14,7 +14,7 @@ const variants = {
 };
 
 function Text() {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ rootMargin: "100% 0px 0px 0px" });
   const controls = useAnimation();
 
   useEffect(() => {

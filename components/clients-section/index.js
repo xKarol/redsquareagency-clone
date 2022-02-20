@@ -13,7 +13,6 @@ import Heading from "./heading";
 function ClientsSection() {
   const half = Math.ceil(clients.length / 2);
 
-
   return (
     <StyledClientsSection className="spacing">
       <Divider />

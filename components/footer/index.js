@@ -1,7 +1,7 @@
 import Email from "./email";
 import Places from "./places";
 import Socials from "./socials";
-import { StyledFooter, Box } from "./styles";
+import { StyledFooter, Box, Container } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
@@ -26,20 +26,22 @@ function Footer() {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-    >
-      <StyledFooter className="spacing">
-        <Email />
-        <Box>
-          <Socials />
-          <Places />
-        </Box>
-      </StyledFooter>
-    </motion.div>
+    <StyledFooter>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variants}
+      >
+        <Container className="spacing">
+          <Email />
+          <Box>
+            <Socials />
+            <Places />
+          </Box>
+        </Container>
+      </motion.div>
+    </StyledFooter>
   );
 }
 

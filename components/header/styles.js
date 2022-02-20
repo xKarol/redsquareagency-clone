@@ -17,7 +17,7 @@ const StyledLink = styled.a`
   align-items: center;
   cursor: pointer;
   transition: transform 200ms ease-in-out;
-  z-index: 10;
+  z-index: 100;
   &:hover {
     /* transform: translateX(5px); // sprawdzic czemu nie ma tla gdy jest ta wartosc */
     > :last-child {
