@@ -30,19 +30,15 @@ const StyledImage = styled.section`
   }
   &.list {
     height: calc(100vw / 2);
-    /* max-height: 650px; */
     margin-top: 25px;
     @media ${device.sm} {
       margin-top: 50px;
-      /* width: calc(100% - 150px); */
     }
     @media ${device.lg} {
       margin-top: 100px;
-      /* width: calc(100% - 150px); */
     }
     @media ${device.xlg} {
       margin-top: 150px;
-      /* width: calc(100% - 150px); */
     }
   }
 `;

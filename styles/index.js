@@ -27,7 +27,6 @@ const Shape = styled.a`
       border-top: calc(var(--a) / 2) solid transparent;
       content: "";
       height: 0;
-      /* transform: translateX(calc(0.2887 * var(--border-left) * 0.5)); */
       transform: translateX(4px) translateY(3px) rotate(30deg);
       width: 0;
     }
