@@ -61,6 +61,23 @@ const GlobalStyles = createGlobalStyle`
             }
         }
     }
+    .scale-transition{
+        transition: transform 200ms ease-in-out;
+        cursor: pointer;
+        @media ${device.lg} {
+            &:hover {
+                transform: scale(0.98);
+            }
+        }
+    }
+    .scale-brightness-transition{
+        transition: transform 200ms ease-in-out, filter 300ms ease-in-out;
+        cursor: pointer;
+        &:hover{
+            transform: scale(0.98);
+            filter: brightness(0.75);
+        }
+    }
 `;
 
 export default GlobalStyles;

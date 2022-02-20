@@ -34,7 +34,7 @@ function PreviewImages() {
         hidden: { translateY: 100, opacity: 0 },
       }}
     >
-      <StyledImages>
+      <StyledImages className="scale-transition">
         {images.map((image, index) => (
           <StyledImage
             key={image.id}

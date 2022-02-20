@@ -5,8 +5,6 @@ const StyledImages = styled.section`
   width: 100%;
   height: calc(100vw / 2);
   margin: 0 auto;
-  cursor: pointer;
-  transition: transform 200ms ease-in-out;
   border-radius: 3px;
   overflow: hidden;
   margin-top: 5vw;
@@ -14,9 +12,6 @@ const StyledImages = styled.section`
   @media ${device.lg} {
     width: calc(100% - 100px);
     height: calc(100% / 66%);
-    &:hover {
-      transform: scale(0.98);
-    }
   }
   @media ${device.xlg} {
     width: calc(100% - 250px);
@@ -29,9 +24,44 @@ const StyledImage = styled.section`
   height: 100%;
   position: relative;
   display: none;
+
   &.active {
     display: block;
   }
+  &.list {
+    height: calc(100vw / 2);
+    /* max-height: 650px; */
+    margin-top: 25px;
+    @media ${device.sm} {
+      margin-top: 50px;
+      /* width: calc(100% - 150px); */
+    }
+    @media ${device.lg} {
+      margin-top: 100px;
+      /* width: calc(100% - 150px); */
+    }
+    @media ${device.xlg} {
+      margin-top: 150px;
+      /* width: calc(100% - 150px); */
+    }
+  }
 `;
 
-export { StyledImages, StyledImage };
+const ImagesList = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: calc(100% - 50px);
+  @media ${device.sm} {
+    width: calc(100% - 100px);
+  }
+  @media ${device.lg} {
+    width: calc(100% - 150px);
+  }
+  @media ${device.xlg} {
+    width: calc(100% - 250px);
+  }
+`;
+
+export { StyledImages, StyledImage, ImagesList };
