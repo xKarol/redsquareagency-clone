@@ -11,6 +11,9 @@ const StyledHero = styled.section`
     height: 270px;
     font-size: 7vw;
   }
+  @media ${device.xlg} {
+    height: 1500px;
+  }
 `;
 
 const slideDown = keyframes`
@@ -27,6 +30,9 @@ const StyledHeading = styled.h1`
   font-size: 1em;
   line-height: 1;
   margin-bottom: 25px;
+  @media ${device.xlg} {
+    font-size: 100px;
+  }
   > span {
     animation: ${slideDown} 400ms attr(data-delay) ease-in-out;
   }

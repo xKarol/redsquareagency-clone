@@ -34,6 +34,10 @@ const GlobalStyles = createGlobalStyle`
             padding-left: 150px;
             padding-right: 150px;
         }
+        @media ${device.xlg}{
+            padding-left: calc(150px + 5vw);
+            padding-right: calc(150px + 5vw);
+        }
     }
     .hover-blur{
         &:before {

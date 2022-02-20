@@ -18,6 +18,10 @@ const StyledImages = styled.section`
       transform: scale(0.98);
     }
   }
+  @media ${device.xlg} {
+    width: calc(100% - 250px);
+    height: calc(100% / 66%);
+  }
 `;
 
 const StyledImage = styled.section`

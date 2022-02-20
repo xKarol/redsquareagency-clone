@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { device } from "../../styles/breakpoints";
 
 const StyledIdeaSection = styled.section`
-  margin: 30px 0;
+  margin: 30px auto;
   line-height: 1.2;
   margin-bottom: 50px;
+  max-width: 2200px;
 `;
 const StyledIdeaHeading = styled.h2`
   margin-bottom: 30px;
@@ -18,6 +19,9 @@ const StyledIdeaHeading = styled.h2`
     margin-bottom: 60px;
     font-size: 4.5vw;
   }
+  @media ${device.xlg} {
+    font-size: 65px;
+  }
 `;
 const StyledIdeaText = styled.p`
   font-size: 22px;
@@ -27,6 +31,10 @@ const StyledIdeaText = styled.p`
   }
   @media ${device.lg} {
     font-size: 2.5vw;
+  }
+  @media ${device.xlg} {
+    line-height: 1.4;
+    font-size: 45px;
   }
 `;
 
