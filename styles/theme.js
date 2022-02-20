@@ -7,6 +7,8 @@ function Theme({ children }) {
       white: "#fefefe",
       red: "#e31e3c",
       gray: "#858585",
+      blue: "#00BFFF",
+      yellow: "#fff44f",
     },
     fonts: {
       main: "'Circular Book', sans-serif",

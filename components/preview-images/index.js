@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import images from "./data.json";
@@ -18,22 +19,38 @@ function PreviewImages() {
   }, [activeImage]);
 
   return (
-    <StyledImages>
-      {images.map((image, index) => (
-        <StyledImage
-          key={image.id}
-          className={`preview-image ${activeImage === index ? "active" : ""}`}
-        >
-          <Image
-            src={image.path}
-            alt={image.alt}
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </StyledImage>
-      ))}
-    </StyledImages>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: {
+          translateY: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.6,
+            delay: 4.5,
+          },
+        },
+        hidden: { translateY: 100, opacity: 0 },
+      }}
+    >
+      <StyledImages>
+        {images.map((image, index) => (
+          <StyledImage
+            key={image.id}
+            className={`preview-image ${activeImage === index ? "active" : ""}`}
+          >
+            <Image
+              src={image.path}
+              alt={image.alt}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </StyledImage>
+        ))}
+      </StyledImages>
+    </motion.div>
   );
 }
 
