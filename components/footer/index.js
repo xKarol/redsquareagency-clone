@@ -9,7 +9,6 @@ import { useAnimation, motion } from "framer-motion";
 const variants = {
   visible: {
     opacity: 1,
-    scale: 1,
     translateY: 0,
     transition: { duration: 0.4 },
   },

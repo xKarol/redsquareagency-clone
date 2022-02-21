@@ -10,7 +10,7 @@ function AnimatedText({ index, text }) {
           opacity: 1,
           transition: {
             duration: 0.6,
-            delay: 2 + 0.4 * index,
+            delay: 2 + 0.3 * index,
           },
         },
         hidden: { opacity: 0 },

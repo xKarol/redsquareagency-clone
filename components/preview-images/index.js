@@ -30,7 +30,7 @@ function PreviewImages() {
             opacity: 1,
             transition: {
               duration: 0.6,
-              delay: 4.5,
+              delay: 4,
             },
           },
           hidden: { translateY: 100, opacity: 0 },
