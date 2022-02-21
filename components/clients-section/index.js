@@ -4,13 +4,14 @@ import {
   Container,
   Box,
 } from "./styles";
-import clients from "./data.json";
 import Client from "./client";
 import Divider from "../divider";
 import Heading from "./heading";
-
+import HomeContext from "../../context/home-context";
+import { useContext } from "react";
 
 function ClientsSection() {
+  const { clients } = useContext(HomeContext);
   const half = Math.ceil(clients.length / 2);
 
   return (
@@ -18,7 +19,6 @@ function ClientsSection() {
       <Divider />
       <Container>
         <Heading />
-
         <StyledClientsList>
           <Box>
             {clients.slice(0, half).map((client) => (
@@ -32,7 +32,6 @@ function ClientsSection() {
           </Box>
         </StyledClientsList>
       </Container>
-
       <Divider />
     </StyledClientsSection>
   );

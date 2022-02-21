@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import images from "./data.json";
+import { useContext, useEffect, useState } from "react";
+import HomeContext from "../../context/home-context";
 import { StyledImage, StyledImages } from "./styles";
 
 function PreviewImages() {
   const [activeImage, setActiveImage] = useState(0);
+  const { images } = useContext(HomeContext);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,7 +18,7 @@ function PreviewImages() {
     return () => {
       clearInterval(timer);
     };
-  }, [activeImage]);
+  }, [activeImage, images.length]);
 
   return (
     <Link href="/work" passHref>

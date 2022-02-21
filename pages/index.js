@@ -1,20 +1,16 @@
-import Header from "../components/header";
-import Hero from "../components/hero";
-import PreviewImages from "../components/preview-images";
-import IdeaSection from "../components/idea-section";
-import ClientsSection from "../components/clients-section";
-import Footer from "../components/footer";
+import Home from "../components/pages";
+import clients from "../components/clients-section/data.json";
+import images from "../components/preview-images/data.json";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <Hero />
+export default function HomePage({ clients, images }) {
+  return <Home data={{ clients, images }} />;
+}
 
-      <PreviewImages />
-      <IdeaSection />
-      <ClientsSection />
-      <Footer />
-    </>
-  );
+export async function getStaticProps() {
+  return {
+    props: {
+      clients,
+      images,
+    },
+  };
 }

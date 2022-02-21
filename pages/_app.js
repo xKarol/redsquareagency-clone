@@ -12,11 +12,6 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const handleRouteChange = () => setFirstLoad(false);
     router.events.on("routeChangeStart", handleRouteChange);
-
-    router.beforePopState(() => {
-      return true;
-    });
-
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
