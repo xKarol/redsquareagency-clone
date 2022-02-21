@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Red Square — The agency for what comes next.</title>
+        <meta name="theme-color" content="#111111" />
       </Head>
       <Theme>
         <GlobalStyles />
