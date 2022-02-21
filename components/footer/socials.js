@@ -10,10 +10,10 @@ import { StyledSocials } from "./styles";
 function Socials() {
   return (
     <StyledSocials>
-      <SocialIcon href="/" icon={<RiFacebookBoxFill />} />
-      <SocialIcon href="/" icon={<RiInstagramFill />} />
-      <SocialIcon href="/" icon={<RiTwitterFill />} />
-      <SocialIcon href="/" icon={<RiLinkedinBoxFill />} />
+      <SocialIcon href="/" icon={<RiFacebookBoxFill />} ariaLabel="facebook" />
+      <SocialIcon href="/" icon={<RiInstagramFill />} ariaLabel="instagram" />
+      <SocialIcon href="/" icon={<RiTwitterFill />} ariaLabel="twitter" />
+      <SocialIcon href="/" icon={<RiLinkedinBoxFill />} ariaLabel="linkedin" />
     </StyledSocials>
   );
 }

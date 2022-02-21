@@ -23,7 +23,10 @@ function Logo() {
 
   return (
     <Link href="/" passHref>
-      <Shape className={firstLoad ? shapes[shapeId] : "square"} />
+      <Shape
+        className={firstLoad ? shapes[shapeId] : "square"}
+        aria-label="redsquareagency logo"
+      />
     </Link>
   );
 }

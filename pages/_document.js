@@ -5,11 +5,11 @@ function Document() {
     <Html lang="en">
       <Head>
         <link
-          href="http://fonts.cdnfonts.com/css/circular-book"
+          href="https://fonts.cdnfonts.com/css/circular-book"
           rel="stylesheet"
         />
         <link
-          href="http://fonts.cdnfonts.com/css/youngserif"
+          href="https://fonts.cdnfonts.com/css/youngserif"
           rel="stylesheet"
         />
       </Head>
