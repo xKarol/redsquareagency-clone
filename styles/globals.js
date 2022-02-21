@@ -39,25 +39,34 @@ const GlobalStyles = createGlobalStyle`
             padding-right: calc(150px + 5vw);
         }
     }
-    .hover-blur{
-        &:before {
+    .bg-hover-blur{
+        > *{
+            z-index: 200;
+        }
+        &:after {
             content: "";
             position: fixed;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
+            z-index: 100;
             backdrop-filter: blur(5px) brightness(0.4);
-            z-index: -1;
             opacity: 0;
             transition: opacity 200ms ease-in-out;
             pointer-events: none;
         }
         &:hover{
-            &:before {
+            &:after {
                 @media ${device.sm} {
                     opacity: 1;
                 }
+            }
+        }
+        &.bg-hover-blur__email{
+            z-index: 200;
+            &:after{
+                z-index: -1;
             }
         }
     }

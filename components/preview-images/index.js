@@ -21,7 +21,7 @@ function PreviewImages() {
 
   return (
     <Link href="/work" passHref>
-      <motion.a
+      <motion.div
         initial="hidden"
         animate="visible"
         variants={{
@@ -54,7 +54,7 @@ function PreviewImages() {
             </StyledImage>
           ))}
         </StyledImages>
-      </motion.a>
+      </motion.div>
     </Link>
   );
 }

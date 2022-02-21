@@ -13,7 +13,6 @@ const StyledEmail = styled.a`
   font-family: ${(props) => props.theme.fonts.mainBold};
   margin-right: 20px;
   position: relative;
-  z-index: 100;
   @media ${device.sm} {
     font-size: 60px;
   }

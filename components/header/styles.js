@@ -6,20 +6,24 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 50;
   @media ${device.lg} {
     margin-top: 100px;
   }
 `;
 
 const StyledLink = styled.a`
-  font-size: 18px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: transform 200ms ease-in-out;
-  z-index: 100;
+  font-size: 18px;
+  > * {
+    transition: transform 200ms ease-in-out;
+  }
   &:hover {
-    /* transform: translateX(5px); // sprawdzic czemu nie ma tla gdy jest ta wartosc */
+    > :first-child {
+      transform: translateX(5px);
+    }
     > :last-child {
       transform: translateX(5px);
     }

@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function HeaderLink() {
-  const router = useRouter();
+  const { pathname } = useRouter();
   return (
-    <Link href={router.pathname === "/" ? "/work" : "/"} passHref>
-      <StyledLink className="hover-blur">
-        Work <BiChevronRight />
+    <Link href={pathname === "/" ? "/work" : "/"} passHref>
+      <StyledLink className="bg-hover-blur">
+        <span>{pathname === "/" ? "Work" : "Red Square"}</span>
+        <BiChevronRight />
       </StyledLink>
     </Link>
   );
