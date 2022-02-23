@@ -1,43 +1,27 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { device } from "../../styles/breakpoints";
 
 const StyledHero = styled.section`
-  height: 500px;
+  height: 50vh;
   display: flex;
   align-items: flex-end;
-  font-size: 36px;
-
-  @media ${device.md} {
-    height: 270px;
-    font-size: 7vw;
-  }
-  @media ${device.xlg} {
-    height: 1500px;
-  }
-`;
-
-const slideDown = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 `;
 
 const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.second};
   font-size: 1em;
-  line-height: 1;
+  line-height: 1.3;
   margin-bottom: 25px;
+  font-size: 36px;
+  @media ${device.md} {
+    font-size: 7vw;
+    line-height: 1;
+  }
   @media ${device.xlg} {
     font-size: 100px;
   }
-  > span {
-    animation: ${slideDown} 400ms attr(data-delay) ease-in-out;
-  }
   > :not(:last-child) {
-    margin-right: 15px;
+    /* margin-right: 15px; */
   }
 `;
 

@@ -16,7 +16,7 @@ function AnimatedText({ index, text }) {
         hidden: { opacity: 0 },
       }}
     >
-      {text}
+      {text}{" "}
     </motion.span>
   );
 }
