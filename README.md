@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<center>
+<br/>
+<h1>Red Square Agency Clone</h1>
 
-## Getting Started
+<br/>
+</center>
+<h2 style="display: inline-block">Table of Contents</h2>
+<ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#screens">Screens</a></li>
+</ol>
 
-First, run the development server:
+## About the Project
+This project is a clone of the redsquareagency website. It uses Next JS for static generation. The page has many animations. 
 
-```bash
-npm run dev
-# or
-yarn dev
+## Built With
+
+* <a href="https://nextjs.org/">Next JS</a>
+* <a href="https://styled-components.com/">Styled Components</a>
+* <a href="https://www.framer.com/motion/">Framer Motion</a>
+* <a href="https://react-icons.github.io/react-icons/">React Icons</a>
+
+## Links 
+- Project URL: https://redsquareagency-clone.vercel.app/
+- Original URL: https://www.redsquareagency.com/
+
+## Installation
+1. Make sure you have installed Node. You can download it from [here](https://nodejs.org/en/).
+2. Open console ([Help](#usage))
+3. Change directory
+
+`cd desktop`
+
+4. Clone the repo
+
+`git clone https://github.com/xKarol/redsquareagency-clone.git`
+
+5. Change directory
+
+`cd redsquareagency-clone`
+
+6. Install NPM packages
+
+`npm install`
+
+## Usage
+1. Open console
+
 ```
+1. Press Win + R
+2. Type "cmd"
+```
+2. Change directory
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```cd desktop/redsquareagency-clone```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. Run project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```npm run dev```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## Screens
+<details open="open">
+  <summary><h4 style="display: inline-block">Mobile</h2></summary>
+  
 
-To learn more about Next.js, take a look at the following resources:
+![FireShot Capture 029 - Red Square — The agency for what comes next _ - redsquareagency-clone vercel app](https://user-images.githubusercontent.com/83913433/155007165-223f9294-6bc5-4f9d-ab08-fd4f3495efad.png)
+  <br/>
+![FireShot Capture 030 - Red Square — The agency for what comes next _ - redsquareagency-clone vercel app](https://user-images.githubusercontent.com/83913433/155007168-80f11c43-5d8f-4cd9-915d-f68bc2b1ccfc.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+</details>
 
-## Deploy on Vercel
+<details open="open">
+  <summary><h4 style="display: inline-block">Desktop</h2></summary>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![FireShot Capture 040 - Red Square — The agency for what comes next _ - redsquareagency-clone vercel app](https://user-images.githubusercontent.com/83913433/155007174-e64fb2ab-66e0-4699-b534-379a5847c15d.png)
+![FireShot Capture 042 - Red Square — The agency for what comes next _ - redsquareagency-clone vercel app](https://user-images.githubusercontent.com/83913433/155007494-7b051495-90fb-4f28-9999-36ec0db39851.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+</details>
