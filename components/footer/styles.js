@@ -71,6 +71,71 @@ const Container = styled.div`
   }
 `;
 
+const StyledAllProjectsContainer = styled.section`
+  display: flex;
+  height: 75px;
+  width: 100%;
+`;
+
+const StyledAllProjectsBlur = styled.div`
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  transition: backdrop-filter 300ms ease-in-out;
+`;
+
+const StyledAllProjectsBox = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  background-image: url("/images/7ee825e0906b2918e50a9f963c50198b5c26b27d_flip-thumb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 125px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 200ms ease-in-out;
+  cursor: pointer;
+  @media ${device.md} {
+    width: calc(100% - 100px);
+    height: 60px;
+  }
+  @media ${device.lg} {
+    width: calc(100% - 200px);
+  }
+  &:hover {
+    @media ${device.md} {
+      height: 100%;
+    }
+    ${StyledAllProjectsBlur} {
+      backdrop-filter: blur(0);
+    }
+  }
+`;
+
+const StyledAllProjectsText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 15px 100px;
+  font-size: 20px;
+  pointer-events: none;
+  @media ${device.md} {
+    height: unset;
+    justify-content: space-between;
+  }
+  > span {
+    display: none;
+    @media ${device.md} {
+      display: block;
+    }
+  }
+  > * {
+    font-size: 22px;
+  }
+`;
+
 export {
   StyledFooter,
   StyledEmail,
@@ -80,4 +145,8 @@ export {
   StyledPlaces,
   Box,
   Container,
+  StyledAllProjectsContainer,
+  StyledAllProjectsBox,
+  StyledAllProjectsBlur,
+  StyledAllProjectsText,
 };

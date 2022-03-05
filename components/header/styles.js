@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   z-index: 50;
+  font-size: 20px;
   @media ${device.lg} {
     margin-top: 100px;
   }
@@ -16,7 +17,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1em;
   > * {
     transition: transform 200ms ease-in-out;
   }

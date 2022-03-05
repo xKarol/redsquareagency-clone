@@ -5,6 +5,8 @@ import { StyledFooter, Box, Container } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
+import AllProjects from "./all-projects";
+import { useRouter } from "next/router";
 
 const variants = {
   visible: {
@@ -18,6 +20,7 @@ const variants = {
 function Footer() {
   const [ref, inView] = useInView();
   const controls = useAnimation();
+  const { pathname } = useRouter();
 
   useEffect(() => {
     if (inView) controls.start("visible");
@@ -39,6 +42,7 @@ function Footer() {
             <Places />
           </Box>
         </Container>
+        {pathname !== "/work" && <AllProjects />}
       </motion.div>
     </StyledFooter>
   );
