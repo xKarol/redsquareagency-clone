@@ -3,11 +3,10 @@ import GlobalStyles from "../styles/globals.js";
 import Theme from "../styles/theme.js";
 import AppContext from "../context/app-context";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const [firstLoad, setFirstLoad] = useState(true);
-  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = () => setFirstLoad(false);
@@ -26,7 +25,9 @@ function MyApp({ Component, pageProps }) {
       <Theme>
         <GlobalStyles />
         <AppContext.Provider value={{ firstLoad }}>
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
         </AppContext.Provider>
       </Theme>
     </>

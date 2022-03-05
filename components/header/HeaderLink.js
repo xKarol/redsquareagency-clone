@@ -20,18 +20,15 @@ function HeaderLink() {
     hidden: { opacity: firstLoad ? 1 : 0, translateX: firstLoad ? 0 : -25 },
   };
 
-  const handleChangeRoute = () => {
-    controls.start("visible");
-  };
-
   return (
     <motion.div
       animate={firstLoad ? controls : "visible"}
       initial="hidden"
       variants={variants}
+      exit={{ translateX: 25, opacity: 0, transition: { duration: 0.4 } }}
     >
       <Link href={pathname === "/" ? "/work" : "/"} passHref>
-        <StyledLink className="bg-hover-blur" onClick={handleChangeRoute}>
+        <StyledLink className="bg-hover-blur">
           <span>{pathname === "/" ? "Work" : "Red Square"}</span>
           <BiChevronRight />
         </StyledLink>
