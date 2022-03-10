@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../styles/breakpoints";
 
-const StyledImages = styled.section`
+const StyledImages = styled.a`
+  display: flex;
   width: 100%;
   height: calc(100vw / 2);
   margin: 0 auto;
@@ -19,7 +20,7 @@ const StyledImages = styled.section`
   }
 `;
 
-const StyledImage = styled.section`
+const StyledImage = styled.div`
   width: 100%;
   height: 100%;
   position: relative;

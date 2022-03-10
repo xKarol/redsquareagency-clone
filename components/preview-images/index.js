@@ -21,22 +21,22 @@ function PreviewImages() {
   }, [activeImage, images.length]);
 
   return (
-    <Link href="/work" passHref>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          visible: {
-            translateY: 0,
-            opacity: 1,
-            transition: {
-              duration: 0.6,
-              delay: 4,
-            },
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: {
+          translateY: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.6,
+            delay: 4,
           },
-          hidden: { translateY: 100, opacity: 0 },
-        }}
-      >
+        },
+        hidden: { translateY: 100, opacity: 0 },
+      }}
+    >
+      <Link href="/work" passHref scroll={false}>
         <StyledImages className="scale-transition">
           {images.map((image, index) => (
             <StyledImage
@@ -55,8 +55,8 @@ function PreviewImages() {
             </StyledImage>
           ))}
         </StyledImages>
-      </motion.div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 

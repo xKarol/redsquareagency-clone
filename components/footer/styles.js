@@ -84,7 +84,7 @@ const StyledAllProjectsBlur = styled.div`
   transition: backdrop-filter 300ms ease-in-out;
 `;
 
-const StyledAllProjectsBox = styled.div`
+const StyledAllProjectsBox = styled.a`
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;

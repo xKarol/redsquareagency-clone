@@ -10,7 +10,7 @@ import Link from "next/link";
 function AllProjects() {
   return (
     <StyledAllProjectsContainer>
-      <Link href="/work" passHref>
+      <Link href="/work" passHref scroll={false}>
         <StyledAllProjectsBox>
           <StyledAllProjectsBlur>
             <StyledAllProjectsText>
