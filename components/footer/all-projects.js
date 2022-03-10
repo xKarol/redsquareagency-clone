@@ -1,4 +1,3 @@
-import HeaderLink from "../header/HeaderLink";
 import {
   StyledAllProjectsContainer,
   StyledAllProjectsBox,
@@ -6,6 +5,7 @@ import {
   StyledAllProjectsText,
 } from "./styles";
 import Link from "next/link";
+import HeaderNav from "../header/HeaderNav";
 
 function AllProjects() {
   return (
@@ -15,7 +15,7 @@ function AllProjects() {
           <StyledAllProjectsBlur>
             <StyledAllProjectsText>
               <span>All Projects</span>
-              <HeaderLink />
+              <HeaderNav>Work</HeaderNav>
             </StyledAllProjectsText>
           </StyledAllProjectsBlur>
         </StyledAllProjectsBox>

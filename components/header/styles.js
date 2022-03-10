@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;

@@ -1,10 +1,9 @@
-import { StyledLink } from "./styles";
-import { BiChevronRight } from "react-icons/bi";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion, useAnimation } from "framer-motion";
 import AppContext from "../../context/app-context";
 import { useContext } from "react";
+import HeaderNav from "./HeaderNav";
 
 function HeaderLink() {
   const { pathname } = useRouter();
@@ -27,11 +26,10 @@ function HeaderLink() {
       variants={variants}
       exit={{ translateX: 25, opacity: 0, transition: { duration: 0.4 } }}
     >
-      <Link href={pathname === "/" ? "/work" : "/"} passHref>
-        <StyledLink className="bg-hover-blur">
-          <span>{pathname === "/" ? "Work" : "Red Square"}</span>
-          <BiChevronRight />
-        </StyledLink>
+      <Link href={pathname === "/" ? "/work" : "/"}>
+        <a>
+          <HeaderNav>{pathname === "/" ? "Work" : "Red Square"}</HeaderNav>
+        </a>
       </Link>
     </motion.div>
   );
