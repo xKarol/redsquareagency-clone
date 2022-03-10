@@ -73,8 +73,11 @@ const Container = styled.div`
 
 const StyledAllProjectsContainer = styled.section`
   display: flex;
-  height: 75px;
   width: 100%;
+  height: 125px;
+  @media ${device.md} {
+    height: 75px;
+  }
 `;
 
 const StyledAllProjectsBlur = styled.div`
@@ -91,14 +94,14 @@ const StyledAllProjectsBox = styled.a`
   background-image: url("/images/7ee825e0906b2918e50a9f963c50198b5c26b27d_flip-thumb.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 125px;
+  height: 100%;
   width: 100%;
   border-radius: 4px 4px 0 0;
   transition: height 200ms ease-in-out;
   cursor: pointer;
   @media ${device.md} {
     width: calc(100% - 100px);
-    height: 60px;
+    height: calc(100% - 15px);
   }
   @media ${device.lg} {
     width: calc(100% - 200px);

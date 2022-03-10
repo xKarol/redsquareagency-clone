@@ -7,6 +7,7 @@ import ClientsSection from "../clients-section";
 import Footer from "../footer";
 import HomeContext from "../../context/home-context";
 import { motion } from "framer-motion";
+import AllProjects from "../footer/all-projects";
 
 function Home({ data }) {
   const { images, clients } = data;
@@ -19,8 +20,10 @@ function Home({ data }) {
         <PreviewImages />
         <IdeaSection />
         <ClientsSection />
-        <Footer />
       </motion.div>
+      <Footer>
+        <AllProjects />
+      </Footer>
     </HomeContext.Provider>
   );
 }

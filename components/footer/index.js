@@ -5,8 +5,6 @@ import { StyledFooter, Box, Container } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
-import AllProjects from "./all-projects";
-import { useRouter } from "next/router";
 
 const variants = {
   visible: {
@@ -17,10 +15,9 @@ const variants = {
   hidden: { opacity: 0, translateY: 50 },
 };
 
-function Footer() {
+function Footer({ children }) {
   const [ref, inView] = useInView();
   const controls = useAnimation();
-  const { pathname } = useRouter();
 
   useEffect(() => {
     if (inView) controls.start("visible");
@@ -35,14 +32,16 @@ function Footer() {
         initial="hidden"
         variants={variants}
       >
-        <Container className="spacing">
-          <Email />
-          <Box>
-            <Socials />
-            <Places />
-          </Box>
-        </Container>
-        {pathname !== "/work" && <AllProjects />}
+        <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
+          <Container className="spacing">
+            <Email />
+            <Box>
+              <Socials />
+              <Places />
+            </Box>
+          </Container>
+        </motion.div>
+        {children}
       </motion.div>
     </StyledFooter>
   );
