@@ -31,16 +31,7 @@ const StyledImage = styled.div`
   }
   &.list {
     height: calc(100vw / 2);
-    margin-top: 25px;
-    @media ${device.sm} {
-      margin-top: 50px;
-    }
-    @media ${device.lg} {
-      margin-top: 100px;
-    }
-    @media ${device.xlg} {
-      margin-top: 150px;
-    }
+    margin-top: 8vw;
   }
 `;
 
@@ -50,14 +41,11 @@ const ImagesList = styled.section`
   margin: 0 auto;
   margin-bottom: 100px;
   width: calc(100% - 50px);
-  @media ${device.sm} {
+  @media ${device.md} {
     width: calc(100% - 100px);
   }
   @media ${device.lg} {
-    width: calc(100% - 150px);
-  }
-  @media ${device.xlg} {
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
   }
 `;
 

@@ -5,10 +5,15 @@ import { ImagesList, StyledImage } from "../preview-images/styles";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import AppContext from "../../context/app-context";
+import { useLayoutEffect } from "react";
 
 function Work({ data }) {
   const { images } = data;
   const { firstLoad } = useContext(AppContext);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
