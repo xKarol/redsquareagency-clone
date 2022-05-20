@@ -23,6 +23,7 @@ function HeaderLink() {
 
   return (
     <motion.div
+      style={{ width: "max-content", overflow: "hidden" }}
       animate={firstLoad ? controls : "visible"}
       initial="hidden"
       variants={variants}
