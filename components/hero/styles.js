@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles/breakpoints";
 
 const StyledHero = styled.section`
   height: 50vh;
@@ -13,15 +13,12 @@ const StyledHeading = styled.h1`
   line-height: 1.3;
   margin-bottom: 25px;
   font-size: 36px;
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     font-size: 7vw;
     line-height: 1;
   }
-  @media ${device.xlg} {
+  @media ${breakpoint.up("xl")} {
     font-size: 100px;
-  }
-  > :not(:last-child) {
-    /* margin-right: 15px; */
   }
 `;
 

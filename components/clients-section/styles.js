@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles/breakpoints";
 
 const StyledClientsSection = styled.section`
   margin-bottom: 60px;
@@ -11,7 +11,7 @@ const StyledClientsHeading = styled.h3`
   color: ${(props) => props.theme.colors.gray};
   font-weight: 300;
   margin-bottom: 10px;
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     margin-right: auto;
   }
 `;
@@ -22,12 +22,12 @@ const Box = styled.ul`
   > li {
     font-size: 22px;
   }
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     :not(:last-child) {
       margin-right: 25px;
     }
   }
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     line-height: 2;
     :not(:last-child) {
       margin-right: 9vw;
@@ -39,10 +39,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 0;
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     margin: 100px 0;
   }
-  @media ${device.lg} {
+  @media ${breakpoint.up("lg")} {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -51,7 +51,7 @@ const Container = styled.div`
 const StyledClientsList = styled.div`
   display: flex;
   flex-direction: column;
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     flex-direction: row;
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles/breakpoints";
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -13,7 +13,7 @@ const StyledEmail = styled.a`
   font-family: ${(props) => props.theme.fonts.mainBold};
   margin-right: 20px;
   position: relative;
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     font-size: 60px;
   }
   span.email {
@@ -55,7 +55,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  @media (min-width: 823px) {
+  @media ${breakpoint.up("810px")} {
     align-items: flex-end;
   }
 `;
@@ -66,7 +66,7 @@ const Container = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  @media ${device.sm} {
+  @media ${breakpoint.up("sm")} {
     margin-bottom: 150px;
   }
 `;
@@ -75,7 +75,7 @@ const StyledAllProjectsContainer = styled.section`
   display: flex;
   width: 100%;
   height: 125px;
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     height: 75px;
   }
 `;
@@ -99,15 +99,15 @@ const StyledAllProjectsBox = styled.a`
   border-radius: 4px 4px 0 0;
   transition: height 200ms ease-in-out;
   cursor: pointer;
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     width: calc(100% - 100px);
     height: calc(100% - 15px);
   }
-  @media ${device.lg} {
+  @media ${breakpoint.up("lg")} {
     width: calc(100% - 200px);
   }
   &:hover {
-    @media ${device.md} {
+    @media ${breakpoint.up("md")} {
       height: 100%;
     }
     ${StyledAllProjectsBlur} {
@@ -124,13 +124,13 @@ const StyledAllProjectsText = styled.div`
   padding: 15px 100px;
   font-size: 20px;
   pointer-events: none;
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     height: unset;
     justify-content: space-between;
   }
   > span {
     display: none;
-    @media ${device.md} {
+    @media ${breakpoint.up("md")} {
       display: block;
     }
   }

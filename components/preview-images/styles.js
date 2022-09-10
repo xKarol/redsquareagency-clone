@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles/breakpoints";
 
 const StyledImages = styled.a`
   display: flex;
@@ -10,11 +10,11 @@ const StyledImages = styled.a`
   overflow: hidden;
   margin-top: 5vw;
   margin-bottom: 5vw;
-  @media ${device.lg} {
+  @media ${breakpoint.up("lg")} {
     width: calc(100% - 100px);
     height: calc(100% / 66%);
   }
-  @media ${device.xlg} {
+  @media ${breakpoint.up("xl")} {
     width: calc(100% - 250px);
     height: calc(100% / 66%);
   }
@@ -41,10 +41,10 @@ const ImagesList = styled.section`
   margin: 0 auto;
   margin-bottom: 100px;
   width: calc(100% - 50px);
-  @media ${device.md} {
+  @media ${breakpoint.up("md")} {
     width: calc(100% - 100px);
   }
-  @media ${device.lg} {
+  @media ${breakpoint.up("lg")} {
     width: calc(100% - 200px);
   }
 `;

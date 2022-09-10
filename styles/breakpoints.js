@@ -1,6 +1,22 @@
-export const device = {
-  sm: `(min-width: 640px)`,
-  md: `(min-width: 768px)`,
-  lg: `(min-width: 1024px)`,
-  xlg: `(min-width: 1400px)`,
+export const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1400,
+};
+
+export const breakpoint = {};
+
+breakpoint.up = (breakpoint) => {
+  if (breakpoint in breakpoints) {
+    return `(min-width: ${breakpoints[breakpoint]}px)`;
+  }
+  return `(min-width: ${breakpoint})`;
+};
+
+breakpoint.down = (breakpoint) => {
+  if (breakpoint in breakpoints) {
+    return `(max-width: ${breakpoints[breakpoint]}px)`;
+  }
+  return `(max-width: ${breakpoint})`;
 };

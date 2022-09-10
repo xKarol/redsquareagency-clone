@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles/breakpoints";
 
 const StyledHeader = styled.header`
   margin-top: 75px;
@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   z-index: 50;
   font-size: 20px;
-  @media ${device.lg} {
+  @media ${breakpoint.up("lg")} {
     margin-top: 100px;
   }
 `;

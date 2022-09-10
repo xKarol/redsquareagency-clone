@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { device } from "./breakpoints";
+import { breakpoint } from "./breakpoints";
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -26,15 +26,15 @@ const GlobalStyles = createGlobalStyle`
     .spacing{
         padding-left: 25px;
         padding-right: 25px;
-        @media ${device.sm}{
+        @media ${breakpoint.up("sm")}{
             padding-left: 50px;
             padding-right: 50px;
         }
-        @media ${device.lg}{
+        @media ${breakpoint.up("lg")}{
             padding-left: 150px;
             padding-right: 150px;
         }
-        @media ${device.xlg}{
+        @media ${breakpoint.up("xl")}{
             padding-left: calc(150px + 5vw);
             padding-right: calc(150px + 5vw);
         }
@@ -58,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
         }
         &:hover{
             &:after {
-                @media ${device.sm} {
+                @media ${breakpoint.up("sm")} {
                     opacity: 1;
                 }
             }
@@ -73,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
     .scale-transition{
         transition: transform 200ms ease-in-out;
         cursor: pointer;
-        @media ${device.lg} {
+        @media ${breakpoint.up("lg")} {
             &:hover {
                 transform: scale(0.98);
             }
