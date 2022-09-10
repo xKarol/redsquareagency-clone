@@ -7,11 +7,8 @@ import {
 import Client from "./client";
 import Divider from "../divider";
 import Heading from "./heading";
-import HomeContext from "../../context/home-context";
-import { useContext } from "react";
 
-function ClientsSection() {
-  const { clients } = useContext(HomeContext);
+function ClientsSection({ clients = [] }) {
   const half = Math.ceil(clients.length / 2);
 
   return (
