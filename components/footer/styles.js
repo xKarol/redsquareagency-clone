@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
   line-height: 1;
 `;
 
-const StyledEmail = styled.a`
+export const StyledEmail = styled.a`
   font-size: 35px;
   font-family: ${(props) => props.theme.fonts.mainBold};
   margin-right: 20px;
@@ -21,16 +21,16 @@ const StyledEmail = styled.a`
   }
 `;
 
-const StyledEmailHeading = styled.h4`
+export const StyledEmailHeading = styled.h4`
   font-family: ${(props) => props.theme.fonts.mainBold};
 `;
 
-const StyledSocials = styled.ul`
+export const StyledSocials = styled.ul`
   display: flex;
   margin-bottom: 25px;
 `;
 
-const StyledSocialLink = styled.li`
+export const StyledSocialLink = styled.li`
   font-size: 25px;
   transition: opacity 300ms ease-in-out;
   &:hover {
@@ -41,7 +41,7 @@ const StyledSocialLink = styled.li`
   }
 `;
 
-const StyledPlaces = styled.ul`
+export const StyledPlaces = styled.ul`
   color: ${(props) => props.theme.colors.gray};
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ const StyledPlaces = styled.ul`
   }
 `;
 
-const Box = styled.div`
+export const Box = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -60,7 +60,7 @@ const Box = styled.div`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ const Container = styled.div`
   }
 `;
 
-const StyledAllProjectsContainer = styled.section`
+export const StyledAllProjectsContainer = styled.section`
   display: flex;
   width: 100%;
   height: 125px;
@@ -80,14 +80,14 @@ const StyledAllProjectsContainer = styled.section`
   }
 `;
 
-const StyledAllProjectsBlur = styled.div`
+export const StyledAllProjectsBlur = styled.div`
   backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
   transition: backdrop-filter 300ms ease-in-out;
 `;
 
-const StyledAllProjectsBox = styled.a`
+export const StyledAllProjectsBox = styled.a`
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
@@ -116,7 +116,7 @@ const StyledAllProjectsBox = styled.a`
   }
 `;
 
-const StyledAllProjectsText = styled.div`
+export const StyledAllProjectsText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,18 +138,3 @@ const StyledAllProjectsText = styled.div`
     font-size: 22px;
   }
 `;
-
-export {
-  StyledFooter,
-  StyledEmail,
-  StyledEmailHeading,
-  StyledSocials,
-  StyledSocialLink,
-  StyledPlaces,
-  Box,
-  Container,
-  StyledAllProjectsContainer,
-  StyledAllProjectsBox,
-  StyledAllProjectsBlur,
-  StyledAllProjectsText,
-};

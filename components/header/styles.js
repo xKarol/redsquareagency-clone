@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   margin-top: 75px;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledLink = styled.div`
+export const StyledLink = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -36,5 +36,3 @@ const StyledLink = styled.div`
     transition: transform 400ms ease-in-out;
   }
 `;
-
-export { StyledHeader, StyledLink };

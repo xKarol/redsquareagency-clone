@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledIdeaSection = styled.section`
+export const StyledIdeaSection = styled.section`
   margin: 30px auto;
   line-height: 1.2;
   margin-bottom: 50px;
   max-width: 2200px;
 `;
 
-const StyledIdeaHeading = styled.h2`
+export const StyledIdeaHeading = styled.h2`
   margin-bottom: 30px;
   font-size: 32px;
   font-family: ${(props) => props.theme.fonts.mainBold};
@@ -25,7 +25,7 @@ const StyledIdeaHeading = styled.h2`
   }
 `;
 
-const StyledIdeaText = styled.p`
+export const StyledIdeaText = styled.p`
   font-size: 22px;
   line-height: 1.6;
   @media ${breakpoint.up("md")} {
@@ -39,5 +39,3 @@ const StyledIdeaText = styled.p`
     font-size: 45px;
   }
 `;
-
-export { StyledIdeaSection, StyledIdeaHeading, StyledIdeaText };

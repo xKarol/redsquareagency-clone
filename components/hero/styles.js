@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledHero = styled.section`
+export const StyledHero = styled.section`
   height: 50vh;
   display: flex;
   align-items: flex-end;
 `;
 
-const StyledHeading = styled.h1`
+export const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.second};
   font-size: 1em;
   line-height: 1.3;
@@ -21,5 +21,3 @@ const StyledHeading = styled.h1`
     font-size: 100px;
   }
 `;
-
-export { StyledHero, StyledHeading };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Shape = styled.a`
+export const Shape = styled.a`
   width: 30px;
   height: 30px;
 
@@ -33,11 +33,9 @@ const Shape = styled.a`
   }
 `;
 
-const StyledDivider = styled.div`
+export const StyledDivider = styled.div`
   height: 1px;
   width: 100%;
   background-color: ${(props) => props.theme.colors.gray};
   opacity: 0.25;
 `;
-
-export { Shape, StyledDivider };

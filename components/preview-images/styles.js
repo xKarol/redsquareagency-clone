@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledImages = styled.a`
+export const StyledImages = styled.a`
   display: flex;
   width: 100%;
   height: calc(100vw / 2);
@@ -20,7 +20,7 @@ const StyledImages = styled.a`
   }
 `;
 
-const StyledImage = styled.div`
+export const StyledImage = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
@@ -35,7 +35,7 @@ const StyledImage = styled.div`
   }
 `;
 
-const ImagesList = styled.section`
+export const ImagesList = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -48,5 +48,3 @@ const ImagesList = styled.section`
     width: calc(100% - 200px);
   }
 `;
-
-export { StyledImages, StyledImage, ImagesList };

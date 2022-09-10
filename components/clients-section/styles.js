@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { breakpoint } from "../../styles";
 
-const StyledClientsSection = styled.section`
+export const StyledClientsSection = styled.section`
   margin-bottom: 60px;
   line-height: 1.5;
 `;
 
-const StyledClientsHeading = styled.h3`
+export const StyledClientsHeading = styled.h3`
   font-size: 18px;
   color: ${(props) => props.theme.colors.gray};
   font-weight: 300;
@@ -16,7 +16,7 @@ const StyledClientsHeading = styled.h3`
   }
 `;
 
-const Box = styled.ul`
+export const Box = styled.ul`
   display: flex;
   flex-direction: column;
   > li {
@@ -35,7 +35,7 @@ const Box = styled.ul`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 0;
@@ -48,18 +48,10 @@ const Container = styled.div`
   }
 `;
 
-const StyledClientsList = styled.div`
+export const StyledClientsList = styled.div`
   display: flex;
   flex-direction: column;
   @media ${breakpoint.up("sm")} {
     flex-direction: row;
   }
 `;
-
-export {
-  StyledClientsSection,
-  StyledClientsHeading,
-  Box,
-  Container,
-  StyledClientsList,
-};
