@@ -1,9 +1,8 @@
 import Head from "next/head";
-import GlobalStyles from "../styles/globals.js";
-import Theme from "../styles/theme.js";
 import AppContext from "../context/app-context";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { ThemeProvider } from "../styles/theme.js";
 
 function MyApp({ Component, pageProps, router }) {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -22,14 +21,13 @@ function MyApp({ Component, pageProps, router }) {
         <title>Red Square — The agency for what comes next.</title>
         <meta name="theme-color" content="#111111" />
       </Head>
-      <Theme>
-        <GlobalStyles />
+      <ThemeProvider>
         <AppContext.Provider value={{ firstLoad }}>
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </AppContext.Provider>
-      </Theme>
+      </ThemeProvider>
     </>
   );
 }

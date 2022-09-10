@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoint } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles";
 
 const StyledClientsSection = styled.section`
   margin-bottom: 60px;

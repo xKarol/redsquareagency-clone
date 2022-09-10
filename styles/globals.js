@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { breakpoint } from "./breakpoints";
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
     *,
     *::before,
     *::after {
@@ -88,5 +88,3 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 `;
-
-export default GlobalStyles;

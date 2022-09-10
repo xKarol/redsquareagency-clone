@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoint } from "../../styles/breakpoints";
+import { breakpoint } from "../../styles";
 
 const StyledImages = styled.a`
   display: flex;
