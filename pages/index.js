@@ -1,9 +1,30 @@
-import Home from "../components/pages";
+import { motion } from "framer-motion";
+import ClientsSection from "../components/clients-section";
+import Footer from "../components/footer";
+import AllProjects from "../components/footer/all-projects";
+import Header from "../components/header";
+import Hero from "../components/hero";
+import IdeaSection from "../components/idea-section";
+import PreviewImages from "../components/preview-images";
+
 import clients from "../components/clients-section/data.json";
 import images from "../components/preview-images/data.json";
 
 export default function HomePage({ clients, images }) {
-  return <Home data={{ clients, images }} />;
+  return (
+    <>
+      <Header />
+      <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
+        <Hero />
+        <PreviewImages images={images} />
+        <IdeaSection />
+        <ClientsSection clients={clients} />
+      </motion.div>
+      <Footer>
+        <AllProjects />
+      </Footer>
+    </>
+  );
 }
 
 export async function getStaticProps() {
