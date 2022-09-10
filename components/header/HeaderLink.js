@@ -9,7 +9,7 @@ function HeaderLink() {
   const { pathname } = useRouter();
   const controls = useAnimation();
   const { firstLoad } = useContext(AppContext);
-  const headerText = pathname === "/" ? "Red Square" : "Work";
+  const headerText = pathname === "/" ? "Work" : "Red Square";
   const [headerName, setHeaderName] = useState(headerText);
 
   const variants = {
