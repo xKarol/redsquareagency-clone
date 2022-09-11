@@ -33,7 +33,7 @@ function Footer({ children }) {
         variants={variants}
       >
         <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
-          <Container className="spacing">
+          <Container className="container">
             <Email />
             <Box>
               <Socials />

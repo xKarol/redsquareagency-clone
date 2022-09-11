@@ -12,7 +12,7 @@ function ClientsSection({ clients = [] }) {
   const half = Math.ceil(clients.length / 2);
 
   return (
-    <StyledClientsSection className="spacing">
+    <StyledClientsSection className="container">
       <Divider />
       <Container>
         <Heading />

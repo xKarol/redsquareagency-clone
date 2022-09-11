@@ -4,7 +4,7 @@ import Text from "./text";
 
 function IdeaSection() {
   return (
-    <StyledIdeaSection className="spacing">
+    <StyledIdeaSection className="container">
       <Heading />
       <Text />
     </StyledIdeaSection>

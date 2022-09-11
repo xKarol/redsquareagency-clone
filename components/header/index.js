@@ -9,7 +9,7 @@ function Header() {
   const { firstLoad } = useContext(AppContext);
 
   return (
-    <StyledHeader className="spacing">
+    <StyledHeader className="container">
       <Logo />
       <motion.div
         initial="hidden"

@@ -3,7 +3,7 @@ import { StyledHero } from "./styles";
 
 function Hero() {
   return (
-    <StyledHero className="spacing">
+    <StyledHero className="container">
       <Heading />
     </StyledHero>
   );

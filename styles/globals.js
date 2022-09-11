@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: ${(props) => props.theme.colors.white};
     }
-    .spacing{
+    .container{
         padding-left: 25px;
         padding-right: 25px;
         @media ${breakpoint.up("sm")}{
