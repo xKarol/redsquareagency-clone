@@ -5,7 +5,7 @@ import {
   Box,
 } from "./styles";
 import Client from "./client";
-import Divider from "../divider";
+import { StyledDivider } from "../../styles";
 import Heading from "./heading";
 
 function ClientsSection({ clients = [] }) {
@@ -13,7 +13,7 @@ function ClientsSection({ clients = [] }) {
 
   return (
     <StyledClientsSection className="container">
-      <Divider />
+      <StyledDivider />
       <Container>
         <Heading />
         <StyledClientsList>
@@ -29,7 +29,7 @@ function ClientsSection({ clients = [] }) {
           </Box>
         </StyledClientsList>
       </Container>
-      <Divider />
+      <StyledDivider />
     </StyledClientsSection>
   );
 }
