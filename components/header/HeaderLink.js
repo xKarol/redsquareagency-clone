@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import AppContext from "../../context/app-context";
 import { useContext, useState } from "react";
 import HeaderNav from "./HeaderNav";
+import { ROUTE_HOME, ROUTE_WORK } from "../../constants/routes";
 
 function HeaderLink() {
   const { pathname } = useRouter();
@@ -30,7 +31,7 @@ function HeaderLink() {
       exit={{ translateX: 25, opacity: 0, transition: { duration: 0.4 } }}
       onAnimationComplete={() => setHeaderName(headerText)}
     >
-      <Link href={pathname === "/" ? "/work" : "/"}>
+      <Link href={pathname === ROUTE_HOME ? ROUTE_WORK : ROUTE_HOME}>
         <a>
           <HeaderNav>{headerName}</HeaderNav>
         </a>

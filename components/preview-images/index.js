@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ROUTE_WORK } from "../../constants/routes";
 import { StyledImage, StyledImages } from "./styles";
 
 function PreviewImages({ images = [] }) {
@@ -34,7 +35,7 @@ function PreviewImages({ images = [] }) {
         hidden: { translateY: 100, opacity: 0 },
       }}
     >
-      <Link href="/work" passHref scroll={false}>
+      <Link href={ROUTE_WORK} passHref scroll={false}>
         <StyledImages className="scale-transition">
           {images.map((image, index) => (
             <StyledImage

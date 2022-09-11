@@ -7,6 +7,7 @@ import {
 import Link from "next/link";
 import HeaderNav from "../header/HeaderNav";
 import { motion } from "framer-motion";
+import { ROUTE_WORK } from "../../constants/routes";
 
 function AllProjects() {
   return (
@@ -19,7 +20,7 @@ function AllProjects() {
         }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <Link href="/work" passHref scroll={false}>
+        <Link href={ROUTE_WORK} passHref scroll={false}>
           <StyledAllProjectsBox>
             <StyledAllProjectsBlur>
               <StyledAllProjectsText>
