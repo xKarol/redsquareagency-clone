@@ -5,7 +5,7 @@ import {
   StyledAllProjectsText,
 } from "./styles";
 import Link from "next/link";
-import HeaderNav from "../header/HeaderNav";
+import HeaderNav from "../header/header-nav";
 import { motion } from "framer-motion";
 import { ROUTE_WORK } from "../../constants/routes";
 

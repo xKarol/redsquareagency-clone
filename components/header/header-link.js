@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { motion, useAnimation } from "framer-motion";
 import AppContext from "../../context/app-context";
 import { useContext, useState } from "react";
-import HeaderNav from "./HeaderNav";
+import HeaderNav from "./header-nav";
 import { ROUTE_HOME, ROUTE_WORK } from "../../constants/routes";
 
 function HeaderLink() {

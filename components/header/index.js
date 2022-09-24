@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import AppContext from "../../context/app-context";
 import Logo from "../logo";
-import HeaderLink from "./HeaderLink";
+import HeaderLink from "./header-link";
 import { StyledHeader } from "./styles";
 
 function Header() {
