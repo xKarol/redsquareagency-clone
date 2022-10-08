@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { ROUTE_WORK } from "../../constants/routes";
-import HeaderNav from "../header/header-nav";
+import { HeaderNavigationButton } from "../header";
 import {
   StyledAllProjectsBlur,
   StyledAllProjectsBox,
@@ -25,7 +25,7 @@ function AllProjects() {
             <StyledAllProjectsBlur>
               <StyledAllProjectsText>
                 <span>All Projects</span>
-                <HeaderNav>Work</HeaderNav>
+                <HeaderNavigationButton>Work</HeaderNavigationButton>
               </StyledAllProjectsText>
             </StyledAllProjectsBlur>
           </StyledAllProjectsBox>

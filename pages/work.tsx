@@ -5,8 +5,8 @@ import { useContext, useEffect } from "react";
 
 import type { ImageType } from "../@types/images";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
+import { HeaderContainer } from "../containers/header";
 import AppContext from "../context/app-context";
 import { imagesJSON } from "../json";
 
@@ -21,7 +21,7 @@ const Work: NextPage<Props> = ({ images }) => {
 
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
         <ImagesList>
           {images.map((image) => (
