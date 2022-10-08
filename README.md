@@ -20,6 +20,7 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 ## Built With
 
 * <a href="https://nextjs.org/">Next JS</a>
+* <a href="https://www.typescriptlang.org/">Typescript</a>
 * <a href="https://styled-components.com/">Styled Components</a>
 * <a href="https://www.framer.com/motion/">Framer Motion</a>
 * <a href="https://react-icons.github.io/react-icons/">React Icons</a>
