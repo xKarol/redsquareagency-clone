@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import ClientsSection from "../components/clients-section";
 import Footer from "../components/footer";
@@ -9,8 +9,12 @@ import IdeaSection from "../components/idea-section";
 import PreviewImages from "../components/preview-images";
 
 import { imagesJSON, clientsJSON } from "../json";
+import type { ImageType } from "../@types/images";
+import type { ClientType } from "../@types/clients";
 
-const Home: NextPage = ({ clients, images }: any) => {
+type Props = { clients: ClientType[]; images: ImageType[] };
+
+const Home: NextPage<Props> = ({ clients, images }) => {
   return (
     <>
       <Header />
@@ -29,11 +33,11 @@ const Home: NextPage = ({ clients, images }: any) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       clients: clientsJSON,
       images: imagesJSON,
     },
   };
-}
+};

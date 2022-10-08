@@ -6,15 +6,12 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
 import { imagesJSON } from "../json";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import type { ImageType } from "../@types/images";
 
-type ImageType = {
-  id: number;
-  path: string;
-  alt: string;
-}[];
+type Props = { images: ImageType[] };
 
-const Work: NextPage = ({ images }: any) => {
+const Work: NextPage<Props> = ({ images }) => {
   const { firstLoad } = useContext(AppContext);
 
   useEffect(() => {
@@ -26,7 +23,7 @@ const Work: NextPage = ({ images }: any) => {
       <Header />
       <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
         <ImagesList>
-          {images.map((image: any) => (
+          {images.map((image) => (
             <motion.div
               key={image.id}
               variants={{ visible: { scale: 1.05 }, firstLoad: { opacity: 0 } }}
@@ -54,10 +51,10 @@ const Work: NextPage = ({ images }: any) => {
 
 export default Work;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       images: imagesJSON,
     },
   };
-}
+};
