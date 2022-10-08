@@ -1,6 +1,7 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 import { StyledClientsHeading } from "./styles";
 
 const variants = {
@@ -22,12 +23,7 @@ function Heading() {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-    >
+    <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
       <StyledClientsHeading>Select Clients</StyledClientsHeading>
     </motion.div>
   );

@@ -1,6 +1,7 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 import { StyledIdeaText } from "./styles";
 
 const variants = {
@@ -23,17 +24,11 @@ function Text() {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-    >
+    <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
       <StyledIdeaText>
-        Red Square believes in rigorous development of brand strategy and
-        whip-smart execution. We make all sorts of things. Things that move
-        markets, compel audiences and sell product. We help great brands create
-        what comes next.
+        Red Square believes in rigorous development of brand strategy and whip-smart execution. We
+        make all sorts of things. Things that move markets, compel audiences and sell product. We
+        help great brands create what comes next.
       </StyledIdeaText>
     </motion.div>
   );

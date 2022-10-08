@@ -1,13 +1,8 @@
-import {
-  StyledClientsSection,
-  StyledClientsList,
-  Container,
-  Box,
-} from "./styles";
-import Client from "./client";
+import type { ClientType } from "../../@types/clients";
 import { StyledDivider } from "../../styles";
+import Client from "./client";
 import Heading from "./heading";
-import { ClientType } from "../../@types/clients";
+import { Box, Container, StyledClientsList, StyledClientsSection } from "./styles";
 
 type Props = {
   clients: ClientType[];

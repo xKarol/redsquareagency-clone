@@ -1,9 +1,10 @@
-import Head from "next/head";
-import AppContext from "../context/app-context";
-import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { ThemeProvider } from "../styles/theme";
 import type { AppProps } from "next/app";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+
+import AppContext from "../context/app-context";
+import { ThemeProvider } from "../styles/theme";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [firstLoad, setFirstLoad] = useState(true);

@@ -1,8 +1,11 @@
 import React from "react";
-import { StyledLink } from "./styles";
 import { BiChevronRight } from "react-icons/bi";
 
-type Props = { children: React.ReactNode };
+import { StyledLink } from "./styles";
+
+type Props = {
+  children: React.ReactNode;
+};
 
 function HeaderNav({ children }: Props) {
   return (

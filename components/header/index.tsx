@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
+
 import AppContext from "../../context/app-context";
 import Logo from "../logo";
 import HeaderLink from "./header-link";
@@ -23,8 +24,7 @@ function Header() {
             },
           },
           hidden: { opacity: firstLoad ? 0 : 1 },
-        }}
-      >
+        }}>
         <HeaderLink />
       </motion.div>
     </StyledHeader>

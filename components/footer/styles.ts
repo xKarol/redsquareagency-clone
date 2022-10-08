@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { breakpoint } from "../../styles";
 
 export const StyledFooter = styled.footer`

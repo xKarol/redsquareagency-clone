@@ -1,9 +1,10 @@
 import {
-  RiInstagramFill,
-  RiTwitterFill,
-  RiLinkedinBoxFill,
   RiFacebookBoxFill,
+  RiInstagramFill,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
 } from "react-icons/ri";
+
 import SocialIcon from "./social-icon";
 import { StyledSocials } from "./styles";
 

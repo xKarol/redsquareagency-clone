@@ -1,4 +1,4 @@
-import { useAnimation, motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -22,12 +22,7 @@ function Client({ name }: { name: string }) {
   }, [controls, inView]);
 
   return (
-    <motion.li
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-    >
+    <motion.li ref={ref} animate={controls} initial="hidden" variants={variants}>
       {name}
     </motion.li>
   );

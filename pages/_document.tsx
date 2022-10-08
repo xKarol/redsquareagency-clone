@@ -1,17 +1,11 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link
-          href="https://fonts.cdnfonts.com/css/circular-book"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.cdnfonts.com/css/youngserif"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.cdnfonts.com/css/circular-book" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/youngserif" rel="stylesheet" />
       </Head>
       <body>
         <Main />

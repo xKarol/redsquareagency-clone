@@ -1,13 +1,14 @@
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+import { ROUTE_WORK } from "../../constants/routes";
+import HeaderNav from "../header/header-nav";
 import {
-  StyledAllProjectsContainer,
-  StyledAllProjectsBox,
   StyledAllProjectsBlur,
+  StyledAllProjectsBox,
+  StyledAllProjectsContainer,
   StyledAllProjectsText,
 } from "./styles";
-import Link from "next/link";
-import HeaderNav from "../header/header-nav";
-import { motion } from "framer-motion";
-import { ROUTE_WORK } from "../../constants/routes";
 
 function AllProjects() {
   return (
@@ -18,8 +19,7 @@ function AllProjects() {
           height: "calc(100vw / 2)",
           y: "calc(-100vh + 8vw + 190px)", // 8vw - margin top in images list
         }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
+        transition={{ delay: 0.5, duration: 1 }}>
         <Link href={ROUTE_WORK} passHref scroll={false}>
           <StyledAllProjectsBox>
             <StyledAllProjectsBlur>

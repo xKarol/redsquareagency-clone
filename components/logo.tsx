@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+
 import AppContext from "../context/app-context";
 import { Shape } from "../styles";
 
@@ -23,10 +24,7 @@ function Logo() {
 
   return (
     <Link href="/" passHref>
-      <Shape
-        className={firstLoad ? shapes[shapeId] : "square"}
-        aria-label="redsquareagency logo"
-      />
+      <Shape className={firstLoad ? shapes[shapeId] : "square"} aria-label="redsquareagency logo" />
     </Link>
   );
 }

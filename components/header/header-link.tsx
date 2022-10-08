@@ -1,10 +1,11 @@
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { motion, useAnimation } from "framer-motion";
-import AppContext from "../../context/app-context";
 import { useContext, useState } from "react";
-import HeaderNav from "./header-nav";
+
 import { ROUTE_HOME, ROUTE_WORK } from "../../constants/routes";
+import AppContext from "../../context/app-context";
+import HeaderNav from "./header-nav";
 
 function HeaderLink() {
   const { pathname } = useRouter();
@@ -29,8 +30,7 @@ function HeaderLink() {
       initial="hidden"
       variants={variants}
       exit={{ translateX: 25, opacity: 0, transition: { duration: 0.4 } }}
-      onAnimationComplete={() => setHeaderName(headerText)}
-    >
+      onAnimationComplete={() => setHeaderName(headerText)}>
       <Link href={pathname === ROUTE_HOME ? ROUTE_WORK : ROUTE_HOME}>
         <a>
           <HeaderNav>{headerName}</HeaderNav>

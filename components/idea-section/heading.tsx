@@ -1,6 +1,7 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 import { StyledIdeaHeading } from "./styles";
 
 const variants = {
@@ -23,15 +24,10 @@ function Heading() {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-    >
+    <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
       <StyledIdeaHeading>
-        We deal in ideas, design and media that are category defying. When the
-        world Millis, you’ve got to Vanilli.
+        We deal in ideas, design and media that are category defying. When the world Millis, you’ve
+        got to Vanilli.
       </StyledIdeaHeading>
     </motion.div>
   );
