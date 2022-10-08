@@ -2,7 +2,7 @@ import Head from "next/head";
 import AppContext from "../context/app-context";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { ThemeProvider } from "../styles/theme.js";
+import { ThemeProvider } from "../styles/theme";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
