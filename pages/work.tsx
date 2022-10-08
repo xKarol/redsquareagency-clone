@@ -5,7 +5,7 @@ import AppContext from "../context/app-context";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
-import imagesData from "../components/preview-images/data.json";
+import { imagesJSON } from "../json";
 import type { NextPage } from "next";
 
 type ImageType = {
@@ -57,7 +57,7 @@ export default Work;
 export async function getStaticProps() {
   return {
     props: {
-      images: imagesData,
+      images: imagesJSON,
     },
   };
 }

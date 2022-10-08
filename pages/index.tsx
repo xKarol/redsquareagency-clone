@@ -8,8 +8,7 @@ import Hero from "../components/hero";
 import IdeaSection from "../components/idea-section";
 import PreviewImages from "../components/preview-images";
 
-import clients from "../components/clients-section/data.json";
-import images from "../components/preview-images/data.json";
+import { imagesJSON, clientsJSON } from "../json";
 
 const Home: NextPage = ({ clients, images }: any) => {
   return (
@@ -33,8 +32,8 @@ export default Home;
 export async function getStaticProps() {
   return {
     props: {
-      clients,
-      images,
+      clients: clientsJSON,
+      images: imagesJSON,
     },
   };
 }
