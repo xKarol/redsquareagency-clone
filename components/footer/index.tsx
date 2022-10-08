@@ -1,3 +1,4 @@
+import React from "react";
 import Email from "./email";
 import Places from "./places";
 import Socials from "./socials";
@@ -15,7 +16,11 @@ const variants = {
   hidden: { opacity: 0, translateY: 50 },
 };
 
-function Footer({ children }) {
+type Props = {
+  children?: React.ReactNode;
+};
+
+function Footer({ children }: Props) {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 

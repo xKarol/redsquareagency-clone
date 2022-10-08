@@ -4,7 +4,7 @@ import AnimatedText from "./animated-text";
 import { StyledHeading } from "./styles";
 
 function Heading() {
-  const [splittedHeading, setSplittedHeading] = useState([]);
+  const [splittedHeading, setSplittedHeading] = useState<string[]>([]);
   const headingText = "The agency for what comes next.";
   const half = Math.ceil(splittedHeading.length / 2);
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ROUTE_WORK } from "../../constants/routes";
 import { StyledImage, StyledImages } from "./styles";
 
-function PreviewImages({ images = [] }) {
+function PreviewImages({ images = [] }: any) {
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function PreviewImages({ images = [] }) {
     >
       <Link href={ROUTE_WORK} passHref scroll={false}>
         <StyledImages className="scale-transition">
-          {images.map((image, index) => (
+          {images.map((image: any, index: any) => (
             <StyledImage
               key={image.id}
               className={`preview-image ${

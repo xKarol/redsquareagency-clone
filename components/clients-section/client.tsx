@@ -12,7 +12,7 @@ const variants = {
   hidden: { opacity: 0, translateX: -15 },
 };
 
-function Client({ name }) {
+function Client({ name }: { name: string }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ rootMargin: "100% 0px 0px 0px" });
 

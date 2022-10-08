@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import { motion } from "framer-motion";
 import ClientsSection from "../components/clients-section";
 import Footer from "../components/footer";
@@ -10,7 +11,7 @@ import PreviewImages from "../components/preview-images";
 import clients from "../components/clients-section/data.json";
 import images from "../components/preview-images/data.json";
 
-export default function HomePage({ clients, images }) {
+const Home: NextPage = ({ clients, images }: any) => {
   return (
     <>
       <Header />
@@ -25,7 +26,9 @@ export default function HomePage({ clients, images }) {
       </Footer>
     </>
   );
-}
+};
+
+export default Home;
 
 export async function getStaticProps() {
   return {

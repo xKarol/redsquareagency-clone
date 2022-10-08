@@ -3,8 +3,9 @@ import AppContext from "../context/app-context";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "../styles/theme.js";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   const [firstLoad, setFirstLoad] = useState(true);
 
   useEffect(() => {
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps, router }) {
       </Head>
       <ThemeProvider>
         <AppContext.Provider value={{ firstLoad }}>
+          {/*@ts-ignore */}
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>

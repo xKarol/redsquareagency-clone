@@ -6,8 +6,15 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
 import imagesData from "../components/preview-images/data.json";
+import type { NextPage } from "next";
 
-export default function WorkPage({ images }) {
+type ImageType = {
+  id: number;
+  path: string;
+  alt: string;
+}[];
+
+const Work: NextPage = ({ images }: any) => {
   const { firstLoad } = useContext(AppContext);
 
   useEffect(() => {
@@ -19,7 +26,7 @@ export default function WorkPage({ images }) {
       <Header />
       <motion.div exit={{ opacity: 0, transition: { duration: 0.8 } }}>
         <ImagesList>
-          {images.map((image) => (
+          {images.map((image: any) => (
             <motion.div
               key={image.id}
               variants={{ visible: { scale: 1.05 }, firstLoad: { opacity: 0 } }}
@@ -43,7 +50,9 @@ export default function WorkPage({ images }) {
       <Footer />
     </>
   );
-}
+};
+
+export default Work;
 
 export async function getStaticProps() {
   return {

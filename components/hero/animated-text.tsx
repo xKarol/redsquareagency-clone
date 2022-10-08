@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 
-function AnimatedText({ index, text }) {
+type Props = {
+  index: number;
+  text: string;
+};
+
+function AnimatedText({ index, text }: Props) {
   return (
     <motion.span
       initial="hidden"

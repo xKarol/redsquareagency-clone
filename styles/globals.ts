@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import { breakpoint } from "./breakpoints";
+import type { ThemeType } from "./theme";
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     *,
     *::before,
     *::after {

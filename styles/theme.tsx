@@ -1,5 +1,8 @@
+import React from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { GlobalStyles } from "./globals";
+
+export type ThemeType = typeof defaultTheme;
 
 export const defaultTheme = {
   colors: {
@@ -17,7 +20,7 @@ export const defaultTheme = {
   },
 };
 
-export function ThemeProvider({ children }) {
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <StyledThemeProvider theme={defaultTheme}>
       <GlobalStyles />
