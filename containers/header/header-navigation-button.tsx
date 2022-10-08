@@ -1,13 +1,13 @@
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 
 import { FadeInAnimation, SlideInOutAnimation } from "../../animations/header";
 import HeaderNavigationButton from "../../components/header/header-navigation-button";
-import AppContext from "../../context/app-context";
+import { useAppContext } from "../../context/app-context";
 import useHeaderNavText from "../../hooks/use-header-nav-text";
 
 const HeaderNavigationButtonContainer = () => {
-  const { firstLoad } = useContext(AppContext);
+  const { firstLoad } = useAppContext();
   const { headerName, setHeaderName, headerText, href } = useHeaderNavText();
 
   return (

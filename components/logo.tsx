@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import AppContext from "../context/app-context";
+import { useAppContext } from "../context/app-context";
 import { Shape } from "../styles";
 
 function Logo() {
   const shapes = ["", "circle", "triangle", "square"];
   const [shapeId, setShapeId] = useState(0);
-  const { firstLoad } = useContext(AppContext);
+  const { firstLoad } = useAppContext();
 
   useEffect(() => {
     if (!firstLoad) return;

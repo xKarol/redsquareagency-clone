@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import type { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
 import type { ImageType } from "../@types/images";
 import Footer from "../components/footer";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
 import { HeaderContainer } from "../containers/header";
-import AppContext from "../context/app-context";
+import { useAppContext } from "../context/app-context";
 import { imagesJSON } from "../json";
 
 type Props = { images: ImageType[] };
 
 const Work: NextPage<Props> = ({ images }) => {
-  const { firstLoad } = useContext(AppContext);
+  const { firstLoad } = useAppContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
