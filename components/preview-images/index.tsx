@@ -2,10 +2,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ImageType } from "../../@types/images";
 import { ROUTE_WORK } from "../../constants/routes";
 import { StyledImage, StyledImages } from "./styles";
 
-function PreviewImages({ images = [] }: any) {
+type Props = {
+  images: ImageType[];
+};
+
+function PreviewImages({ images = [] }: Props) {
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
@@ -37,7 +42,7 @@ function PreviewImages({ images = [] }: any) {
     >
       <Link href={ROUTE_WORK} passHref scroll={false}>
         <StyledImages className="scale-transition">
-          {images.map((image: any, index: any) => (
+          {images.map((image, index) => (
             <StyledImage
               key={image.id}
               className={`preview-image ${

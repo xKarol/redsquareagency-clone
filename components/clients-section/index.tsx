@@ -7,8 +7,13 @@ import {
 import Client from "./client";
 import { StyledDivider } from "../../styles";
 import Heading from "./heading";
+import { ClientType } from "../../@types/clients";
 
-function ClientsSection({ clients = [] }: any) {
+type Props = {
+  clients: ClientType[];
+};
+
+function ClientsSection({ clients = [] }: Props) {
   const half = Math.ceil(clients.length / 2);
 
   return (
@@ -18,12 +23,12 @@ function ClientsSection({ clients = [] }: any) {
         <Heading />
         <StyledClientsList>
           <Box>
-            {clients.slice(0, half).map((client: any) => (
+            {clients.slice(0, half).map((client) => (
               <Client key={client.id} name={client.name} />
             ))}
           </Box>
           <Box>
-            {clients.slice(half, clients.length).map((client: any) => (
+            {clients.slice(half, clients.length).map((client) => (
               <Client key={client.id} name={client.name} />
             ))}
           </Box>
