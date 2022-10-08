@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       </Head>
       <ThemeProvider>
         <AppContext.Provider value={{ firstLoad }}>
-          {/*@ts-ignore */}
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
