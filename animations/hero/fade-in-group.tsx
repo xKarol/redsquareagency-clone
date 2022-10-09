@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 type Props = {
+  children: React.ReactNode;
   index: number;
-  text: string;
 };
 
-function AnimatedText({ index, text }: Props) {
+const FadeInGroupAnimation = ({ children, index }: Props) => {
   return (
     <motion.span
       initial="hidden"
@@ -20,9 +21,9 @@ function AnimatedText({ index, text }: Props) {
         },
         hidden: { opacity: 0 },
       }}>
-      {text}{" "}
+      {children}
     </motion.span>
   );
-}
+};
 
-export default AnimatedText;
+export default FadeInGroupAnimation;
