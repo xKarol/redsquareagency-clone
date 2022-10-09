@@ -1,8 +1,8 @@
 import Tilt from "react-parallax-tilt";
 
-import { StyledEmail, StyledEmailHeading } from "./styles";
+import { StyledEmail, StyledEmailHeading } from "../../components/footer";
 
-function Email() {
+const FooterEmailContainer = () => {
   return (
     <StyledEmail href="mailto:hi@mail.com" className="bg-hover-blur bg-hover-blur__email">
       <Tilt transitionSpeed={2000} tiltReverse={true} tiltMaxAngleY={10}>
@@ -11,6 +11,6 @@ function Email() {
       </Tilt>
     </StyledEmail>
   );
-}
+};
 
-export default Email;
+export default FooterEmailContainer;

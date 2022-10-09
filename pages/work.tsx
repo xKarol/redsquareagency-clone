@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 import type { ImageType } from "../@types/images";
-import Footer from "../components/footer";
 import { ImagesList, StyledImage } from "../components/preview-images/styles";
+import { FooterContainer } from "../containers/footer";
 import { HeaderContainer } from "../containers/header";
 import { useAppContext } from "../context/app-context";
 import { imagesJSON } from "../json";
@@ -38,7 +38,7 @@ const Work: NextPage<Props> = ({ images }) => {
           ))}
         </ImagesList>
       </motion.div>
-      <Footer />
+      <FooterContainer />
     </>
   );
 };

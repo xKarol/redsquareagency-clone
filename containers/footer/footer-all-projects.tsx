@@ -1,25 +1,19 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { ROUTE_WORK } from "../../constants/routes";
-import { HeaderNavigationButton } from "../header";
+import { SlideOutAnimation } from "../../animations/footer";
 import {
   StyledAllProjectsBlur,
   StyledAllProjectsBox,
   StyledAllProjectsContainer,
   StyledAllProjectsText,
-} from "./styles";
+} from "../../components/footer";
+import { HeaderNavigationButton } from "../../components/header";
+import { ROUTE_WORK } from "../../constants/routes";
 
-function AllProjects() {
+const FooterAllProjectsContainer = () => {
   return (
     <StyledAllProjectsContainer>
-      <motion.div
-        initial={{ width: "100%", display: "flex", height: "100%" }}
-        exit={{
-          height: "calc(100vw / 2)",
-          y: "calc(-100vh + 8vw + 190px)", // 8vw - margin top in images list
-        }}
-        transition={{ delay: 0.5, duration: 1 }}>
+      <SlideOutAnimation>
         <Link href={ROUTE_WORK} passHref scroll={false}>
           <StyledAllProjectsBox>
             <StyledAllProjectsBlur>
@@ -30,9 +24,9 @@ function AllProjects() {
             </StyledAllProjectsBlur>
           </StyledAllProjectsBox>
         </Link>
-      </motion.div>
+      </SlideOutAnimation>
     </StyledAllProjectsContainer>
   );
-}
+};
 
-export default AllProjects;
+export default FooterAllProjectsContainer;

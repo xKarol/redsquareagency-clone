@@ -1,6 +1,6 @@
-import { StyledPlaces } from "./styles";
+import { StyledPlaces } from "../../components/footer";
 
-function Places() {
+const FooterPlacesContainer = () => {
   return (
     <StyledPlaces>
       <li>Mobile, AL</li>
@@ -8,6 +8,6 @@ function Places() {
       <li>Tulsa, OK</li>
     </StyledPlaces>
   );
-}
+};
 
-export default Places;
+export default FooterPlacesContainer;

@@ -3,10 +3,10 @@ import type { GetStaticProps, NextPage } from "next";
 
 import type { ClientType } from "../@types/clients";
 import type { ImageType } from "../@types/images";
-import Footer from "../components/footer";
-import AllProjects from "../components/footer/all-projects";
 import PreviewImages from "../components/preview-images";
 import { ClientsContainer } from "../containers/clients";
+import { FooterContainer } from "../containers/footer";
+import AllProjects from "../containers/footer/footer-all-projects";
 import { HeaderContainer } from "../containers/header";
 import { HeroContainer } from "../containers/hero";
 import { IdeaContainer } from "../containers/idea-section";
@@ -24,9 +24,9 @@ const Home: NextPage<Props> = ({ clients, images }) => {
         <IdeaContainer />
         <ClientsContainer clients={clients} />
       </motion.div>
-      <Footer>
+      <FooterContainer>
         <AllProjects />
-      </Footer>
+      </FooterContainer>
     </>
   );
 };

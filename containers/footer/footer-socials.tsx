@@ -5,10 +5,10 @@ import {
   RiTwitterFill,
 } from "react-icons/ri";
 
-import SocialIcon from "./social-icon";
-import { StyledSocials } from "./styles";
+import { StyledSocials } from "../../components/footer";
+import SocialIcon from "../../components/footer/footer-social-icon";
 
-function Socials() {
+const FooterSocialsContainer = () => {
   return (
     <StyledSocials>
       <SocialIcon href="/" icon={<RiFacebookBoxFill />} ariaLabel="facebook" />
@@ -17,6 +17,6 @@ function Socials() {
       <SocialIcon href="/" icon={<RiLinkedinBoxFill />} ariaLabel="linkedin" />
     </StyledSocials>
   );
-}
+};
 
-export default Socials;
+export default FooterSocialsContainer;
