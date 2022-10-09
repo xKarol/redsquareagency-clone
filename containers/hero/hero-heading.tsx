@@ -2,7 +2,7 @@ import React from "react";
 
 import { SlideUpAnimation } from "../../animations/hero";
 import { HeroHeadingWord } from "../../components/hero";
-import { StyledHeading } from "../../components/hero/styles";
+import { Styles } from "../../components/hero/styles";
 import useSplitText from "../../hooks/use-split-text";
 
 const HeroHeadingContainer = () => {
@@ -11,7 +11,7 @@ const HeroHeadingContainer = () => {
 
   return (
     <SlideUpAnimation>
-      <StyledHeading>
+      <Styles.Heading>
         {textChunks.map((chunk, chunkIndex) => {
           return (
             <>
@@ -29,7 +29,7 @@ const HeroHeadingContainer = () => {
             </>
           );
         })}
-      </StyledHeading>
+      </Styles.Heading>
     </SlideUpAnimation>
   );
 };

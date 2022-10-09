@@ -1,13 +1,13 @@
 import React from "react";
 
-import { StyledHero } from "../../components/hero/styles";
+import { Styles } from "../../components/hero/styles";
 import HeroHeadingContainer from "./hero-heading";
 
 const HeroContainer = () => {
   return (
-    <StyledHero className="container">
+    <Styles.Container className="container">
       <HeroHeadingContainer />
-    </StyledHero>
+    </Styles.Container>
   );
 };
 
