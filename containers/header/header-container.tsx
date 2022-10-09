@@ -1,15 +1,15 @@
 import React from "react";
 
-import { StyledHeader } from "../../components/header/styles";
+import { Styles } from "../../components/header";
 import Logo from "../../components/logo";
 import HeaderNavigationButtonContainer from "./header-navigation-button";
 
 const HeaderContainer = () => {
   return (
-    <StyledHeader className="container">
+    <Styles.Header className="container">
       <Logo />
       <HeaderNavigationButtonContainer />
-    </StyledHeader>
+    </Styles.Header>
   );
 };
 
