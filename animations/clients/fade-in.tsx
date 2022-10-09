@@ -1,8 +1,11 @@
 import { motion, useAnimation } from "framer-motion";
+import React from "react";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { StyledClientsHeading } from "./styles";
+type Props = {
+  children: React.ReactNode;
+};
 
 const variants = {
   visible: {
@@ -13,7 +16,7 @@ const variants = {
   hidden: { opacity: 0 },
 };
 
-function Heading() {
+const FadeInAnimation = ({ children }: Props) => {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
@@ -24,9 +27,9 @@ function Heading() {
 
   return (
     <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
-      <StyledClientsHeading>Select Clients</StyledClientsHeading>
+      {children}
     </motion.div>
   );
-}
+};
 
-export default Heading;
+export default FadeInAnimation;

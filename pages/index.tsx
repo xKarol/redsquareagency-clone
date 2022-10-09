@@ -3,10 +3,10 @@ import type { GetStaticProps, NextPage } from "next";
 
 import type { ClientType } from "../@types/clients";
 import type { ImageType } from "../@types/images";
-import ClientsSection from "../components/clients-section";
 import Footer from "../components/footer";
 import AllProjects from "../components/footer/all-projects";
 import PreviewImages from "../components/preview-images";
+import { ClientsContainer } from "../containers/clients";
 import { HeaderContainer } from "../containers/header";
 import { HeroContainer } from "../containers/hero";
 import { IdeaContainer } from "../containers/idea-section";
@@ -22,7 +22,7 @@ const Home: NextPage<Props> = ({ clients, images }) => {
         <HeroContainer />
         <PreviewImages images={images} />
         <IdeaContainer />
-        <ClientsSection clients={clients} />
+        <ClientsContainer clients={clients} />
       </motion.div>
       <Footer>
         <AllProjects />

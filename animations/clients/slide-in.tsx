@@ -12,7 +12,11 @@ const variants = {
   hidden: { opacity: 0, translateX: -15 },
 };
 
-function Client({ name }: { name: string }) {
+type Props = {
+  children: React.ReactNode;
+};
+
+const SlideInAnimation = ({ children }: Props) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ rootMargin: "100% 0px 0px 0px" });
 
@@ -23,9 +27,9 @@ function Client({ name }: { name: string }) {
 
   return (
     <motion.li ref={ref} animate={controls} initial="hidden" variants={variants}>
-      {name}
+      {children}
     </motion.li>
   );
-}
+};
 
-export default Client;
+export default SlideInAnimation;
