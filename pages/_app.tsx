@@ -1,4 +1,5 @@
 import "sanitize.css";
+import "../styles/fonts.css";
 
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";

@@ -3,10 +3,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <link href="https://fonts.cdnfonts.com/css/circular-book" rel="stylesheet" />
-        <link href="https://fonts.cdnfonts.com/css/youngserif" rel="stylesheet" />
-      </Head>
+      <Head></Head>
       <body>
         <Main />
         <NextScript />
