@@ -14,17 +14,15 @@ export namespace Styles {
 
     @media ${breakpoint.up("lg")} {
       width: calc(100% - 100px);
-      height: calc(100% / 66%);
     }
     @media ${breakpoint.up("xl")} {
       width: calc(100% - 250px);
-      height: calc(100% / 66%);
     }
   `;
 
   export const Image = styled.figure`
     width: 100%;
-    height: 100%;
+    height: calc(100vw / 2);
     position: relative;
     display: block;
     background-color: ${({ theme }) => theme.colors.placeholderColor};
@@ -32,10 +30,6 @@ export namespace Styles {
     overflow: hidden;
     &.hidden {
       display: none;
-    }
-    &.list {
-      height: calc(100vw / 2);
-      margin-top: 8vw;
     }
   `;
 
@@ -45,6 +39,9 @@ export namespace Styles {
     margin: 0 auto;
     margin-bottom: 100px;
     width: calc(100% - 50px);
+    ${Image} {
+      margin-top: 8vw;
+    }
     @media ${breakpoint.up("md")} {
       width: calc(100% - 100px);
     }

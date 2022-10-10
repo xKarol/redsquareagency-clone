@@ -17,7 +17,7 @@ const PreviewImagesListContainer = ({ images }: Props) => {
       <Styles.ImagesList>
         {images.map(({ path, alt, id }) => (
           <BounceAnimation key={id} firstLoad={firstLoad}>
-            <PreviewImage className="list scale-brightness-transition" src={path} alt={alt} />
+            <PreviewImage className="scale-brightness-transition" src={path} alt={alt} />
           </BounceAnimation>
         ))}
       </Styles.ImagesList>
