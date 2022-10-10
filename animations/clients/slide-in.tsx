@@ -1,6 +1,6 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
+import useInViewAnimation from "../../hooks/use-in-view-animation";
 
 const variants = {
   visible: {
@@ -17,13 +17,7 @@ type Props = {
 };
 
 const SlideInAnimation = ({ children }: Props) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ rootMargin: "100% 0px 0px 0px" });
-
-  useEffect(() => {
-    if (inView) controls.start("visible");
-    else controls.start("hidden");
-  }, [controls, inView]);
+  const { ref, controls } = useInViewAnimation({ rootMargin: "100% 0px 0px 0px" });
 
   return (
     <motion.li ref={ref} animate={controls} initial="hidden" variants={variants}>

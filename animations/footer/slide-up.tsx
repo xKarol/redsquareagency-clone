@@ -1,6 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import React from "react";
+
+import useInViewAnimation from "../../hooks/use-in-view-animation";
 
 type Props = {
   children: React.ReactNode;
@@ -16,13 +17,7 @@ const variants = {
 };
 
 const SlideUpAnimation = ({ children }: Props) => {
-  const [ref, inView] = useInView();
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) controls.start("visible");
-    else controls.start("hidden");
-  }, [controls, inView]);
+  const { ref, controls } = useInViewAnimation();
 
   return (
     <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
