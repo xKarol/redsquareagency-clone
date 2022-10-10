@@ -6,12 +6,12 @@ import { pxToRem } from "./utils";
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     *,
-    *::before,
-    *::after {
+    ::before,
+    ::after {
         padding: 0;
         margin: 0;
-        box-sizing: border-box;
     }
+
     body {
         font-size: ${pxToRem(22)};
         font-weight: 300;
@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     }
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.white};
+        color: inherit;
     }
     .container{
         padding-left: 25px;
