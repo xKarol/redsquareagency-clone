@@ -13,7 +13,7 @@ export namespace Styles {
   export const Heading = styled.h2`
     margin-bottom: 30px;
     font-size: ${pxToRem(32)};
-    font-family: ${(props) => props.theme.fonts.mainBold};
+    font-family: ${({ theme }) => theme.fonts.mainBold};
     letter-spacing: -2px;
     @media ${breakpoint.up("md")} {
       font-size: ${pxToRem(45)};

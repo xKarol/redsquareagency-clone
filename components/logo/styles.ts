@@ -21,7 +21,7 @@ export namespace Styles {
       variant === "circle" &&
       css`
         border-radius: 50%;
-        background-color: ${(props) => props.theme.colors.blue};
+        background-color: ${({ theme }) => theme.colors.blue};
       `};
 
     ${({ variant }) =>
@@ -36,7 +36,7 @@ export namespace Styles {
           --a: 30px;
           --border-left: calc(0.866 * var(--a));
           border-bottom: calc(var(--a) / 2) solid transparent;
-          border-left: var(--border-left) solid ${(props) => props.theme.colors.yellow};
+          border-left: var(--border-left) solid ${({ theme }) => theme.colors.yellow};
           border-right: 0;
           border-top: calc(var(--a) / 2) solid transparent;
           content: "";

@@ -12,19 +12,19 @@ export namespace Styles {
 
   export const Email = styled.a`
     font-size: ${pxToRem(35)};
-    font-family: ${(props) => props.theme.fonts.mainBold};
+    font-family: ${({ theme }) => theme.fonts.mainBold};
     margin-right: 20px;
     position: relative;
     @media ${breakpoint.up("sm")} {
       font-size: ${pxToRem(60)};
     }
     span.email {
-      color: ${(props) => props.theme.colors.red};
+      color: ${({ theme }) => theme.colors.red};
     }
   `;
 
   export const EmailHeading = styled.h4`
-    font-family: ${(props) => props.theme.fonts.mainBold};
+    font-family: ${({ theme }) => theme.fonts.mainBold};
   `;
 
   export const SocialsList = styled.ul`
@@ -44,7 +44,7 @@ export namespace Styles {
   `;
 
   export const PlacesList = styled.ul`
-    color: ${(props) => props.theme.colors.gray};
+    color: ${({ theme }) => theme.colors.gray};
     display: flex;
     align-items: center;
     font-size: ${pxToRem(18)};

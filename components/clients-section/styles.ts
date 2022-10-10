@@ -10,7 +10,7 @@ export namespace Styles {
 
   export const Heading = styled.h3`
     font-size: ${pxToRem(18)};
-    color: ${(props) => props.theme.colors.gray};
+    color: ${({ theme }) => theme.colors.gray};
     font-weight: 300;
     margin-bottom: 10px;
     @media ${breakpoint.up("sm")} {

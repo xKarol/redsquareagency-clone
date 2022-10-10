@@ -15,16 +15,16 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     body {
         font-size: ${pxToRem(22)};
         font-weight: 300;
-        font-family: ${(props) => props.theme.fonts.main};
-        background-color: ${(props) => props.theme.colors.black};
-        color: ${(props) => props.theme.colors.white};
+        font-family: ${({ theme }) => theme.fonts.main};
+        background-color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.white};
     }
     ol, ul {
         list-style: none;
     }
     a {
         text-decoration: none;
-        color: ${(props) => props.theme.colors.white};
+        color: ${({ theme }) => theme.colors.white};
     }
     .container{
         padding-left: 25px;
