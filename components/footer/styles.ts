@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoint } from "../../styles";
+import { breakpoint, pxToRem } from "../../styles";
 
 export namespace Styles {
   export const Footer = styled.footer`
@@ -11,12 +11,12 @@ export namespace Styles {
   `;
 
   export const Email = styled.a`
-    font-size: 35px;
+    font-size: ${pxToRem(35)};
     font-family: ${(props) => props.theme.fonts.mainBold};
     margin-right: 20px;
     position: relative;
     @media ${breakpoint.up("sm")} {
-      font-size: 60px;
+      font-size: ${pxToRem(60)};
     }
     span.email {
       color: ${(props) => props.theme.colors.red};
@@ -33,7 +33,7 @@ export namespace Styles {
   `;
 
   export const SocialItem = styled.li`
-    font-size: 25px;
+    font-size: ${pxToRem(25)};
     transition: opacity 300ms ease-in-out;
     &:hover {
       opacity: 0.5;
@@ -47,7 +47,7 @@ export namespace Styles {
     color: ${(props) => props.theme.colors.gray};
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: ${pxToRem(18)};
   `;
 
   export const PlaceItem = styled.li`
@@ -128,7 +128,7 @@ export namespace Styles {
     justify-content: center;
     height: 100%;
     padding: 15px 100px;
-    font-size: 20px;
+    font-size: ${pxToRem(20)};
     pointer-events: none;
     @media ${breakpoint.up("md")} {
       height: unset;
@@ -141,7 +141,7 @@ export namespace Styles {
       }
     }
     > * {
-      font-size: 22px;
+      font-size: ${pxToRem(22)};
     }
   `;
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoint } from "../../styles";
+import { breakpoint, pxToRem } from "../../styles";
 
 export namespace Styles {
   export const Header = styled.header`
@@ -9,7 +9,7 @@ export namespace Styles {
     align-items: center;
     justify-content: space-between;
     z-index: 50;
-    font-size: 20px;
+    font-size: ${pxToRem(20)};
     @media ${breakpoint.up("lg")} {
       margin-top: 100px;
     }
@@ -33,7 +33,7 @@ export namespace Styles {
     }
     > :last-child {
       color: ${({ theme }) => theme.colors.white};
-      font-size: 22px;
+      font-size: ${pxToRem(22)};
       margin-left: 5px;
       transition: transform 400ms ease-in-out;
     }

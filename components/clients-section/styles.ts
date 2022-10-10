@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoint } from "../../styles";
+import { breakpoint, pxToRem } from "../../styles";
 
 export namespace Styles {
   export const Container = styled.section`
@@ -9,7 +9,7 @@ export namespace Styles {
   `;
 
   export const Heading = styled.h3`
-    font-size: 18px;
+    font-size: ${pxToRem(18)};
     color: ${(props) => props.theme.colors.gray};
     font-weight: 300;
     margin-bottom: 10px;
@@ -48,7 +48,7 @@ export namespace Styles {
   `;
 
   export const Item = styled.li`
-    font-size: 22px;
+    font-size: ${pxToRem(22)};
   `;
 
   export const ClientsBox = styled.div`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoint } from "../../styles";
+import { breakpoint, pxToRem } from "../../styles";
 
 export namespace Styles {
   export const Container = styled.section`
@@ -12,33 +12,33 @@ export namespace Styles {
 
   export const Heading = styled.h2`
     margin-bottom: 30px;
-    font-size: 32px;
+    font-size: ${pxToRem(32)};
     font-family: ${(props) => props.theme.fonts.mainBold};
     letter-spacing: -2px;
     @media ${breakpoint.up("md")} {
-      font-size: 45px;
+      font-size: ${pxToRem(45)};
     }
     @media ${breakpoint.up("lg")} {
       margin-bottom: 60px;
       font-size: 4.5vw;
     }
     @media ${breakpoint.up("xl")} {
-      font-size: 65px;
+      font-size: ${pxToRem(65)};
     }
   `;
 
   export const Text = styled.p`
-    font-size: 22px;
+    font-size: ${pxToRem(22)};
     line-height: 1.6;
     @media ${breakpoint.up("md")} {
-      font-size: 24px;
+      font-size: ${pxToRem(24)};
     }
     @media ${breakpoint.up("lg")} {
       font-size: 2.5vw;
     }
     @media ${breakpoint.up("xl")} {
       line-height: 1.4;
-      font-size: 45px;
+      font-size: ${pxToRem(45)};
     }
   `;
 }

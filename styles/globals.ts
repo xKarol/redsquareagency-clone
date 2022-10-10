@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+
 import { breakpoint } from "./breakpoints";
 import type { ThemeType } from "./theme";
+import { pxToRem } from "./utils";
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     *,
@@ -11,7 +13,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
         box-sizing: border-box;
     }
     body {
-        font-size: 22px;
+        font-size: ${pxToRem(22)};
         font-weight: 300;
         font-family: ${(props) => props.theme.fonts.main};
         background-color: ${(props) => props.theme.colors.black};
