@@ -5,16 +5,15 @@ import {
   RiTwitterFill,
 } from "react-icons/ri";
 
-import { Styles } from "../../components/footer";
-import SocialIcon from "../../components/footer/footer-social-icon";
+import { FooterSocialIcon, Styles } from "../../components/footer";
 
 const FooterSocialsContainer = () => {
   return (
     <Styles.SocialsList>
-      <SocialIcon href="/" icon={<RiFacebookBoxFill />} ariaLabel="facebook" />
-      <SocialIcon href="/" icon={<RiInstagramFill />} ariaLabel="instagram" />
-      <SocialIcon href="/" icon={<RiTwitterFill />} ariaLabel="twitter" />
-      <SocialIcon href="/" icon={<RiLinkedinBoxFill />} ariaLabel="linkedin" />
+      <FooterSocialIcon href="/" icon={<RiFacebookBoxFill />} aria-label="facebook" />
+      <FooterSocialIcon href="/" icon={<RiInstagramFill />} aria-label="instagram" />
+      <FooterSocialIcon href="/" icon={<RiTwitterFill />} aria-label="twitter" />
+      <FooterSocialIcon href="/" icon={<RiLinkedinBoxFill />} aria-label="linkedin" />
     </Styles.SocialsList>
   );
 };
