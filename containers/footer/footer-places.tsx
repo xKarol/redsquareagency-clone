@@ -1,12 +1,12 @@
-import { StyledPlaces } from "../../components/footer";
+import { Styles } from "../../components/footer";
 
 const FooterPlacesContainer = () => {
   return (
-    <StyledPlaces>
-      <li>Mobile, AL</li>
-      <li>Chicago, IL</li>
-      <li>Tulsa, OK</li>
-    </StyledPlaces>
+    <Styles.PlacesList>
+      <Styles.PlaceItem>Mobile, AL</Styles.PlaceItem>
+      <Styles.PlaceItem>Chicago, IL</Styles.PlaceItem>
+      <Styles.PlaceItem>Tulsa, OK</Styles.PlaceItem>
+    </Styles.PlacesList>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
 
 import { FadeOutAnimation, SlideUpAnimation } from "../../animations/footer";
-import { Box, Container, StyledFooter } from "../../components/footer";
-import Email from "./footer-email";
+import { Styles } from "../../components/footer";
+import FooterEmailContainer from "./footer-email";
 import FooterPlacesContainer from "./footer-places";
 import FooterSocialsContainer from "./footer-socials";
 
@@ -12,20 +12,20 @@ type Props = {
 
 const FooterContainer = ({ children }: Props) => {
   return (
-    <StyledFooter>
+    <Styles.Footer>
       <SlideUpAnimation>
         <FadeOutAnimation>
-          <Container className="container">
-            <Email />
-            <Box>
+          <Styles.Container className="container">
+            <FooterEmailContainer />
+            <Styles.Box>
               <FooterSocialsContainer />
               <FooterPlacesContainer />
-            </Box>
-          </Container>
+            </Styles.Box>
+          </Styles.Container>
         </FadeOutAnimation>
         {children}
       </SlideUpAnimation>
-    </StyledFooter>
+    </Styles.Footer>
   );
 };
 

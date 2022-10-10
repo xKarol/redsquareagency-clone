@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { StyledSocialLink } from "./styles";
+import { Styles } from "./styles";
 
 type Props = {
   icon: JSX.Element;
@@ -10,11 +10,11 @@ type Props = {
 
 function SocialIcon({ icon, href, ariaLabel = "" }: Props) {
   return (
-    <StyledSocialLink>
+    <Styles.SocialItem>
       <Link href={href}>
         <a aria-label={ariaLabel}>{icon}</a>
       </Link>
-    </StyledSocialLink>
+    </Styles.SocialItem>
   );
 }
 
