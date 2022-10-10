@@ -14,6 +14,7 @@ export const defaultTheme = {
     dark: "#2E2E2E",
     blue: "#00BFFF",
     yellow: "#fff44f",
+    placeholderColor: "#1c1c1c",
   },
   fonts: {
     main: "'Circular Book', sans-serif",

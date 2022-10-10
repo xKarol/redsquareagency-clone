@@ -8,10 +8,10 @@ export namespace Styles {
     width: 100%;
     height: calc(100vw / 2);
     margin: 0 auto;
-    border-radius: 3px;
     overflow: hidden;
     margin-top: 5vw;
     margin-bottom: 5vw;
+
     @media ${breakpoint.up("lg")} {
       width: calc(100% - 100px);
       height: calc(100% / 66%);
@@ -27,7 +27,9 @@ export namespace Styles {
     height: 100%;
     position: relative;
     display: block;
-
+    background-color: ${({ theme }) => theme.colors.placeholderColor};
+    border-radius: 3px;
+    overflow: hidden;
     &.hidden {
       display: none;
     }
