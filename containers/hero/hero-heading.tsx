@@ -1,9 +1,9 @@
 import React from "react";
 
 import { SlideUpAnimation } from "../../animations/hero";
-import { HeroHeadingWord } from "../../components/hero";
 import { Styles } from "../../components/hero/styles";
 import useSplitText from "../../hooks/use-split-text";
+import HeroHeadingWordContainer from "./hero-heading-word";
 
 const HeroHeadingContainer = () => {
   const headingText = "The agency for what comes next.";
@@ -18,9 +18,11 @@ const HeroHeadingContainer = () => {
               const lastChunkId = chunkIndex - 1;
               const lastChunkLastWordId = lastChunkId < 0 ? 0 : textChunks[lastChunkId].length - 1;
               return (
-                <HeroHeadingWord key={word} index={chunkIndex + lastChunkLastWordId + wordIndex}>
+                <HeroHeadingWordContainer
+                  key={word}
+                  index={chunkIndex + lastChunkLastWordId + wordIndex}>
                   {word}
-                </HeroHeadingWord>
+                </HeroHeadingWordContainer>
               );
             })}
             <br />
