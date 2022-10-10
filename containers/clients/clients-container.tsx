@@ -2,11 +2,7 @@ import React from "react";
 
 import type { ClientType } from "../../@types/clients";
 import { FadeInAnimation } from "../../animations/clients";
-import {
-  Container,
-  StyledClientsHeading,
-  StyledClientsSection,
-} from "../../components/clients-section/styles";
+import { Styles } from "../../components/clients-section/styles";
 import { StyledDivider } from "../../styles";
 import ClientsListContainer from "./clients-list";
 
@@ -16,16 +12,16 @@ type Props = {
 
 const ClientsContainer = ({ clients = [] }: Props) => {
   return (
-    <StyledClientsSection className="container">
+    <Styles.Container className="container">
       <StyledDivider />
-      <Container>
+      <Styles.Section>
         <FadeInAnimation>
-          <StyledClientsHeading>Select Clients</StyledClientsHeading>
+          <Styles.Heading>Select Clients</Styles.Heading>
         </FadeInAnimation>
         <ClientsListContainer clients={clients} />
-      </Container>
+      </Styles.Section>
       <StyledDivider />
-    </StyledClientsSection>
+    </Styles.Container>
   );
 };
 
