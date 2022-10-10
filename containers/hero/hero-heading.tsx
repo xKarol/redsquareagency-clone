@@ -12,23 +12,20 @@ const HeroHeadingContainer = () => {
   return (
     <SlideUpAnimation>
       <Styles.Heading>
-        {textChunks.map((chunk, chunkIndex) => {
-          return (
-            <>
-              {chunk.map((word, wordIndex) => {
-                const lastChunkId = chunkIndex - 1;
-                const lastChunkLastWordId =
-                  lastChunkId < 0 ? 0 : textChunks[lastChunkId].length - 1;
-                return (
-                  <HeroHeadingWord key={word} index={chunkIndex + lastChunkLastWordId + wordIndex}>
-                    {word}
-                  </HeroHeadingWord>
-                );
-              })}
-              <br />
-            </>
-          );
-        })}
+        {textChunks.map((chunk, chunkIndex) => (
+          <React.Fragment key={String(chunk) + chunkIndex}>
+            {chunk.map((word, wordIndex) => {
+              const lastChunkId = chunkIndex - 1;
+              const lastChunkLastWordId = lastChunkId < 0 ? 0 : textChunks[lastChunkId].length - 1;
+              return (
+                <HeroHeadingWord key={word} index={chunkIndex + lastChunkLastWordId + wordIndex}>
+                  {word}
+                </HeroHeadingWord>
+              );
+            })}
+            <br />
+          </React.Fragment>
+        ))}
       </Styles.Heading>
     </SlideUpAnimation>
   );
