@@ -3,7 +3,7 @@ import React from "react";
 import type { ClientType } from "../../@types/clients";
 import { FadeInAnimation } from "../../animations/clients";
 import { Styles } from "../../components/clients-section/styles";
-import { StyledDivider } from "../../styles";
+import { Divider } from "../../components/divider";
 import ClientsListContainer from "./clients-list";
 
 type Props = {
@@ -13,14 +13,14 @@ type Props = {
 const ClientsContainer = ({ clients = [] }: Props) => {
   return (
     <Styles.Container className="container">
-      <StyledDivider />
+      <Divider />
       <Styles.Section>
         <FadeInAnimation>
           <Styles.Heading>Select Clients</Styles.Heading>
         </FadeInAnimation>
         <ClientsListContainer clients={clients} />
       </Styles.Section>
-      <StyledDivider />
+      <Divider />
     </Styles.Container>
   );
 };

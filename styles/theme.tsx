@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
+
 import { GlobalStyles } from "./globals";
 
 export type ThemeType = typeof defaultTheme;
@@ -10,6 +11,7 @@ export const defaultTheme = {
     white: "#fefefe",
     red: "#e31e3c",
     gray: "#858585",
+    dark: "#2E2E2E",
     blue: "#00BFFF",
     yellow: "#fff44f",
   },
