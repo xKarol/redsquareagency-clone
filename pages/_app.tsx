@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       </Head>
       <ThemeProvider>
         <AppContext.Provider value={{ firstLoad }}>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </AppContext.Provider>
