@@ -5,15 +5,16 @@ type Props = {
   children: React.ReactNode;
 };
 
+const variants = {
+  initial: { width: "100%", display: "flex", height: "100%" },
+  exit: { height: "calc(100vw / 2)", y: "calc(-100vh + 8vw + 190px)" },
+};
+
+const transition = { delay: 0.5, duration: 1 };
+
 const SlideOutAnimation = ({ children }: Props) => {
   return (
-    <motion.div
-      initial={{ width: "100%", display: "flex", height: "100%" }}
-      exit={{
-        height: "calc(100vw / 2)",
-        y: "calc(-100vh + 8vw + 190px)",
-      }}
-      transition={{ delay: 0.5, duration: 1 }}>
+    <motion.div initial="initial" exit="exit" variants={variants} transition={transition}>
       {children}
     </motion.div>
   );

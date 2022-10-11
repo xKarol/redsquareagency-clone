@@ -15,6 +15,7 @@ const SlideInOutAnimation = ({ firstLoad, children, ...rest }: Props) => {
         transition: { duration: 0.4 },
       },
       hidden: { opacity: firstLoad ? 1 : 0, translateX: firstLoad ? 0 : -25 },
+      exit: { translateX: 25, opacity: 0, transition: { duration: 0.4 } },
     }),
     [firstLoad],
   );
@@ -23,10 +24,10 @@ const SlideInOutAnimation = ({ firstLoad, children, ...rest }: Props) => {
     <motion.div
       {...rest}
       style={{ width: "max-content", overflow: "hidden" }}
+      variants={variants}
       animate={firstLoad ? "hidden" : "visible"}
       initial="hidden"
-      variants={variants}
-      exit={{ translateX: 25, opacity: 0, transition: { duration: 0.4 } }}>
+      exit="exit">
       {children}
     </motion.div>
   );
