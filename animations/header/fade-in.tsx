@@ -1,3 +1,4 @@
+import type { Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import React, { useMemo } from "react";
 
@@ -7,7 +8,7 @@ type Props = {
 };
 
 const FadeInAnimation = ({ firstLoad, children }: Props) => {
-  const variants = useMemo(
+  const variants: Variants = useMemo(
     () => ({
       visible: {
         opacity: 1,

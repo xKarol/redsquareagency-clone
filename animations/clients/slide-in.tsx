@@ -1,8 +1,9 @@
+import type { Variants } from "framer-motion";
 import { motion } from "framer-motion";
 
 import useInViewAnimation from "../../hooks/use-in-view-animation";
 
-const variants = {
+const variants: Variants = {
   visible: {
     opacity: 1,
     translateX: 0,

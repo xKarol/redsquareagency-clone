@@ -1,3 +1,4 @@
+import type { Variants } from "framer-motion";
 import { type MotionProps, motion } from "framer-motion";
 import React, { useMemo } from "react";
 
@@ -7,7 +8,7 @@ type Props = {
 } & MotionProps;
 
 const SlideInOutAnimation = ({ firstLoad, children, ...rest }: Props) => {
-  const variants = useMemo(
+  const variants: Variants = useMemo(
     () => ({
       visible: {
         opacity: firstLoad ? 0 : 1,

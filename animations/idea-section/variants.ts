@@ -1,4 +1,6 @@
-export const variants = {
+import type { Variants } from "framer-motion";
+
+export const variants: Variants = {
   visible: {
     opacity: 1,
     scale: 1,

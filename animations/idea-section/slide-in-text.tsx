@@ -1,3 +1,4 @@
+import type { Variants } from "framer-motion";
 import React from "react";
 
 import SlideInAnimation from "./slide-in";
@@ -7,7 +8,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const variants = {
+const variants: Variants = {
   visible: {
     ...defaultVariant.visible,
     transition: { duration: 0.6 },
