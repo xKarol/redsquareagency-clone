@@ -66,7 +66,7 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Screens
-<details open="open">
+<details>
   <summary><h4 style="display: inline-block">Mobile</h2></summary>
   
 
@@ -77,7 +77,7 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 
 </details>
 
-<details open="open">
+<details>
   <summary><h4 style="display: inline-block">Desktop</h2></summary>
 
 ![FireShot Capture 040 - Red Square — The agency for what comes next _ - redsquareagency-clone vercel app](https://user-images.githubusercontent.com/83913433/155007174-e64fb2ab-66e0-4699-b534-379a5847c15d.png)
