@@ -1,8 +1,5 @@
 <center>
-<br/>
 <h1>Red Square Agency Clone</h1>
-
-<br/>
 </center>
 <h2 style="display: inline-block">Table of Contents</h2>
 <ol>
@@ -15,7 +12,7 @@
 </ol>
 
 ## About the Project
-This project is a clone of the redsquareagency website. It uses Next JS for static generation. The page has many animations. 
+This project is a clone of the redsquareagency website. It was built using NextJS and Typescript.
 
 ## Built With
 
@@ -31,7 +28,7 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 
 ## Installation
 1. Make sure you have installed Node. You can download it from [here](https://nodejs.org/en/).
-2. Open console ([Help](#usage))
+2. Open console
 3. Change directory
 
 `cd desktop`
@@ -50,11 +47,6 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 
 ## Usage
 1. Open console
-
-```
-1. Press Win + R
-2. Type "cmd"
-```
 2. Change directory
 
 ```cd desktop/redsquareagency-clone```
@@ -63,7 +55,7 @@ This project is a clone of the redsquareagency website. It uses Next JS for stat
 
 ```npm run dev```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Paste the url into your browser: [http://localhost:3000](http://localhost:3000).
 
 ## Screens
 <details>
